@@ -51,6 +51,10 @@ Route::get('/page-login', 'AdminController@page_login')->name('page-login');
 Route::get('/page-register', 'AdminController@page_register')->name('page-register');
 Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
 // Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
+Route::get('/register_agence', 'AdminController@register_agence')->name('register_agence');
+Route::post('/register_agence_store', 'AdminController@register_agence_store')->name('register_agence_store');
+Route::get('/confirm/{id}/{token}', 'Auth\RegisterController@confirm');
+
 // Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
 // Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
 // Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');

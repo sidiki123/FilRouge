@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use Illuminate\Auth\Events\Registered;
+
 
 class HomeController extends Controller
 {

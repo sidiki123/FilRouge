@@ -54,7 +54,7 @@
                     <div class="header__nav">
                         <nav class="header__menu mobile-menu">
                             <ul>
-                                <li class="active"><a href="{{route('home')}}">Accueil</a></li>
+                            <li class="active"><a href="{{route('home')}}">Accueil</a></li>
                                 <li ><a href="{{route('about')}}">A propos</a></li>
                                 <li><a href="{{route('discography')}}">Evenements</a></li>
                                 <li><a href="{{route('tours')}}">A la une</a></li>
@@ -67,16 +67,16 @@
                                     </ul>
                                 </li> -->
                                 @guest
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('page-login') }}">{{ __('Login') }}</a>
+                                <li>
+                                    <a class="nav-link" href="{{ route('login') }}">Login</a>
                                 </li>
                                 @if (Route::has('register'))
                                    
                                         
                                         <li><a class="primary-btn">register</a>
                                             <ul class="dropdown">
-                                                <li><a href="{{ route('page-register') }}" >Visiteur</a></li>
-                                                <li><a href="{{ route('page-register') }}" >Agence</a></li>
+                                                <li><a href="{{ route('register') }}" >Visiteur</a></li>
+                                                <li><a href="{{ route('register_agence') }}" >Agence</a></li>
                                             </ul>
                                         </li>
                                   
@@ -94,16 +94,16 @@
                                                          document.getElementById('logout-form').submit();">
                                             {{ __('Logout') }}
                                         </a>
-                                        <a href="{{ route('logout') }}"
-                                           onclick="event.preventDefault();
-                                                         document.getElementById('logout-form').submit();">
-                                            {{ __('Dashboard') }}
-                                        </a>
+                                       
     
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                             @csrf
                                         </form>
+                                        
                                     </li>
+                                    <li><a href="{{ route('dashboard') }}">
+                                            {{ __('Dashboard') }}
+                                        </a></li>
                                        
                                     </ul>
     

@@ -15,7 +15,7 @@ class CreateAgencesTable extends Migration
     {
         Schema::create('agences', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nom');
+            $table->string('name');
             $table->string('prenom');
             $table->integer('telephone');
             $table->string('nom_agence');

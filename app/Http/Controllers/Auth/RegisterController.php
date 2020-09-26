@@ -1,13 +1,19 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-
+use App\User;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
-use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Support\Facades\Auth;
+use App\Notifications\RegisteredUser;
+use App\Role;
+use Illuminate\Notifications\Notifiable;
 
 class RegisterController extends Controller
 {
@@ -23,7 +29,7 @@ class RegisterController extends Controller
     */
 
     use RegistersUsers;
-
+use Notifiable;
     /**
      * Where to redirect users after registration.
      *
@@ -39,6 +45,25 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+    }
+
+    function register(Request $request){
+        $this->validator($request->all())->validate();
+        event(new Registered( $user=$this->create($request->all())));
+        $user->notify(new RegisteredUser);
+        return redirect('/login')->with('success','Votre compte a été crée, veuillez verifier votre boite mail');
+    }
+    
+    public function confirm($id, $token){
+        $user= User::where('id', $id)->where('confirmation_token',$token)->first();
+        if($user){
+            $user->update(['confirmation_token'=>null]);
+            $this->guard()->login($user);
+            return redirect($this->redirectPath())->with('success','Votre cmpgte a été confirmé');
+        }
+        else{
+            return redirect('/login')->with('error','ce lien semmble invalide');
+        }
     }
 
     /**
@@ -62,12 +87,22 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data)
+    protected function create( array $data)
     {
-        return User::create([
+       
+        $user= User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'confirmation_token'=> str_replace('/','', bcrypt(Str::random(16))),
+            
         ]);
+        $role = new Role(['name' => 'visiteur']);
+$user->roles()->save($role);
+return $user;
+       
+       
+        
+
     }
 }

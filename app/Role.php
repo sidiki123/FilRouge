@@ -3,18 +3,24 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\User;
+use Illuminate\Notifications\Notifiable;
 
 class Role extends Model
 {
-    public function permissions() {
+    use Notifiable;
+    public $table = "roles";
+    protected $fillable=['name'];
+    // public function permissions() {
 
-        return $this->belongsToMany(Permission::class,'roles_permissions');
+    //     return $this->belongsToMany(Permission::class,'roles_permissions');
             
-     }
+    //  }
      
-     public function users() {
+       
+    public function roles() {
      
-        return $this->belongsToMany(User::class,'users_roles');
+        return $this->hasMany(User::class,'users_roles');
             
      }
 }

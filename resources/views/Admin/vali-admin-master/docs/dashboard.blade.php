@@ -63,6 +63,5 @@
         </div>
       </div>
     </main>
-@include('Admin/vali-admin-master/docs/inc.header')
   </body>
 </html>

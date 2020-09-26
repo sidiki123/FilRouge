@@ -2,30 +2,29 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\User;
+use App\Agence;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
 
-     /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+   
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    // public function index()
-    // {
-    //     //
-    // }
+    public function index()
+    {
+        //
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -130,9 +129,7 @@ class AdminController extends Controller
         return view('Admin/vali-admin-master/docs/form-sample');
     }
 
-    public function index(){
-        return view('Admin/vali-admin-master/docs/index');
-    }
+    
 
     public function page_calendar(){
         return view('Admin/vali-admin-master/docs/page-calendar');
@@ -182,4 +179,34 @@ class AdminController extends Controller
         return view('Admin/vali-admin-master/docs/widgets');
     }
 
+    public function register_agence(){
+        return view('auth/register-agence');
+    }
+
+    public function register_agence_store(Request $request )
+    {
+        $user = new User([
+            'name' => $request->get('name'),
+            'email' => $request->get('email'),
+            'password' => Hash::make($request->get('password')),
+            'id_agence' => $request->get('id_agence'),
+            'id_visiteur' => $request->get('id_visiteur'),
+            'id_admin' => $request->get('id_admin'),
+        ]);
+        $user->save();
+
+        $agence = new Agence([
+            'name' => $request->get('name'),
+            'prenom' => $request->get('prenom'),
+            'telephone' => $request->get('telephone'),
+            'nom_agence' => $request->get('nom_agence'),
+            'telephone_agence' => $request->get('telephone_agence'),
+            'email' => $request->get('email'),
+            'password' => Hash::make($request->get('password')),
+            // 'password' => Hash::make($data['password']),
+            
+           
+        ]);
+    $agence->save();
+    }
 }

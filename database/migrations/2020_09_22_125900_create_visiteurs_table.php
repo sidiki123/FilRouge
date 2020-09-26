@@ -15,7 +15,7 @@ class CreateVisiteursTable extends Migration
     {
         Schema::create('visiteurs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nom');
+            $table->string('name');
             $table->string('prenom');
             $table->integer('telephone');
             $table->string('email')->unique();
