@@ -22,6 +22,9 @@ class CreateUsersTable extends Migration
             // $table->foreign('id_agence')->references('id')->on('agences')->onDelete('cascade')->onUpdate('cascade');
             // $table->foreign('id_admin')->references('id')->on('admins')->onDelete('cascade')->onUpdate('cascade');
             $table->string('name');
+            $table->string('prenom')->nullable();
+            $table->string('telephone')->nullable();
+            $table->string('nom_agence')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

@@ -98,11 +98,9 @@ use Notifiable;
             
         ]);
         $role = new Role(['name' => 'visiteur']);
-$user->roles()->save($role);
-return $user;
-       
-       
-        
-
+        $user->roles()->save($role);
+        return $user;
     }
+
+   
 }

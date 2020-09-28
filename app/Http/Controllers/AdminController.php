@@ -3,15 +3,24 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\User;
-use App\Agence;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Notifications\Notifiable;
+use App\User;
+use Illuminate\Support\Str;
+use App\Role;
 
 class AdminController extends Controller
 {
-
+    protected $guard = 'Admin';
+    use Notifiable;
    
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
+
+
     // public function __construct()
     // {
     //     $this->middleware('auth');
@@ -183,30 +192,29 @@ class AdminController extends Controller
         return view('auth/register-agence');
     }
 
-    public function register_agence_store(Request $request )
+    /**
+     * Create a new user instance after a valid registration.
+     *
+     * @param  array  $data
+     * @return \App\User
+     */
+    protected function register_agence_store(Request $request)
     {
         $user = new User([
-            'name' => $request->get('name'),
-            'email' => $request->get('email'),
-            'password' => Hash::make($request->get('password')),
-            'id_agence' => $request->get('id_agence'),
-            'id_visiteur' => $request->get('id_visiteur'),
-            'id_admin' => $request->get('id_admin'),
-        ]);
-        $user->save();
-
-        $agence = new Agence([
             'name' => $request->get('name'),
             'prenom' => $request->get('prenom'),
             'telephone' => $request->get('telephone'),
             'nom_agence' => $request->get('nom_agence'),
-            'telephone_agence' => $request->get('telephone_agence'),
+            'city' => $request->get('city'),
             'email' => $request->get('email'),
-            'password' => Hash::make($request->get('password')),
-            // 'password' => Hash::make($data['password']),
-            
-           
+            'password' =>Hash::make($request->get('password')),
+            // 'confirmation_token' => str_replace(['/','', bcrypt(Str::random(16))]),
         ]);
-    $agence->save();
+        $user->save();
+        $role = new Role(['name' => 'agence']);
+        $user->roles()->save($role);
+        return $user;
+
+       
     }
 }
