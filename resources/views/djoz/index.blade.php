@@ -5,11 +5,11 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="hero__text">
-                        <span>New single</span>
-                        <h1>Feel the heart beats</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br />tempor
-                            incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="https://www.youtube.com/watch?v=K4DyBUG242c" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                        <span>EVTICKET</span>
+                        <h1>Pateforme Evenementielle</h1>
+                        <p>Acheter et reserver vos tickets pour les evenemenements de prestige  <br /> ou
+                        devenez membre afin d'accroitre a visibiité de vos evenements </p>
+                        {{-- <a href="https://www.youtube.com/watch?v=K4DyBUG242c" class="play-btn video-popup"><i class="fa fa-play"></i></a> --}}
                     </div>
                 </div>
             </div>
@@ -26,7 +26,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-title">
-                            <h2>Upcoming Events</h2>
+                            <h2>A venir</h2>
                         </div>
                     </div>
                 </div>
@@ -36,12 +36,12 @@
                             <div class="event__item">
                                 <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/events/event-1.jpg')}}">
                                     <div class="tag-date">
-                                        <span>Dec 15, 2019</span>
+                                        <span>02 Aout 2021</span>
                                     </div>
                                 </div>
                                 <div class="event__item__text">
-                                    <h4>David Guetta Miami Ultra</h4>
-                                    <p><i class="fa fa-map-marker"></i> Funkhaus Berlin, Berlin, Germany</p>
+                                    <h4>Semaine Nationale de la culture(SNC) </h4>
+                                    <p><i class="fa fa-map-marker"></i>Palais de la culture, Bobo Dioulasso, Burkina</p>
                                 </div>
                             </div>
                         </div>
@@ -49,12 +49,12 @@
                             <div class="event__item">
                                 <div class="event__item__pic set-bg" data-setbg="assets/img/events/event-2.jpg">
                                     <div class="tag-date">
-                                        <span>Dec 15, 2019</span>
+                                        <span>27 Mars 2021</span>
                                     </div>
                                 </div>
                                 <div class="event__item__text">
-                                    <h4>David Guetta Miami Ultra</h4>
-                                    <p><i class="fa fa-map-marker"></i> Funkhaus Berlin, Berlin, Germany</p>
+                                    <h4>Nuit Httypique de koudougou(NAK)</h4>
+                                    <p><i class="fa fa-map-marker"></i> Maison du peuple, Koudougou, Burkina</p>
                                 </div>
                             </div>
                         </div>
@@ -62,12 +62,12 @@
                             <div class="event__item">
                                 <div class="event__item__pic set-bg" data-setbg="assets/img/events/event-3.jpg">
                                     <div class="tag-date">
-                                        <span>Dec 15, 2019</span>
+                                        <span>15 Decembre 2020 à 10h00</span>
                                     </div>
                                 </div>
                                 <div class="event__item__text">
-                                    <h4>David Guetta Miami Ultra</h4>
-                                    <p><i class="fa fa-map-marker"></i> Funkhaus Berlin, Berlin, Germany</p>
+                                    <h4>BF1 Freestyle</h4>
+                                    <p><i class="fa fa-map-marker"></i> Cenasa, ouagadougou, Burkina</p>
                                 </div>
                             </div>
                         </div>
@@ -75,12 +75,12 @@
                             <div class="event__item">
                                 <div class="event__item__pic set-bg" data-setbg="assets/img/events/event-2.jpg">
                                     <div class="tag-date">
-                                        <span>Dec 15, 2019</span>
+                                        <span>5 Decembre 2020 à 14h00</span>
                                     </div>
                                 </div>
                                 <div class="event__item__text">
-                                    <h4>David Guetta Miami Ultra</h4>
-                                    <p><i class="fa fa-map-marker"></i> Funkhaus Berlin, Berlin, Germany</p>
+                                    <h4>Fespaco</h4>
+                                    <p><i class="fa fa-map-marker"></i> Maison du peuple, ouagadougou, Burkina</p>
                                 </div>
                             </div>
                         </div>
@@ -90,6 +90,295 @@
         </section>
     <!-- Event Section End -->
 
+     <!-- Event Section Begin -->
+     <section class="event spad">
+        <div class="container">
+                <div class="row" style="text-align:center; padding-bottom:10px;">
+                        <div class="col-lg-12">
+                            <div class="section-title">
+                                <h2>La une des evenements par categorie</h2>
+                                <h1></h1>
+                            </div>
+                        </div>
+                </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>A la une des Concerts</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="event__slider owl-carousel">
+                    <div class="col-lg-4">
+                        <div class="event__item">
+                            <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/events/event-1.jpg')}}">
+                                <div class="tag-date">
+                                    <span>02 Aout 2021</span>
+                                </div>
+                            </div>
+                            <div class="event__item__text">
+                                <h4>Semaine Nationale de la culture(SNC) </h4>
+                                <p><i class="fa fa-map-marker"></i>Palais de la culture, Bobo Dioulasso, Burkina</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="event__item">
+                            <div class="event__item__pic set-bg" data-setbg="assets/img/events/event-2.jpg">
+                                <div class="tag-date">
+                                    <span>27 Mars 2021</span>
+                                </div>
+                            </div>
+                            <div class="event__item__text">
+                                <h4>Nuit Httypique de koudougou(NAK)</h4>
+                                <p><i class="fa fa-map-marker"></i> Maison du peuple, Koudougou, Burkina</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="event__item">
+                            <div class="event__item__pic set-bg" data-setbg="assets/img/events/event-3.jpg">
+                                <div class="tag-date">
+                                    <span>15 Decembre 2020 à 10h00</span>
+                                </div>
+                            </div>
+                            <div class="event__item__text">
+                                <h4>BF1 Freestyle</h4>
+                                <p><i class="fa fa-map-marker"></i> Cenasa, ouagadougou, Burkina</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="event__item">
+                            <div class="event__item__pic set-bg" data-setbg="assets/img/events/event-2.jpg">
+                                <div class="tag-date">
+                                    <span>5 Decembre 2020 à 14h00</span>
+                                </div>
+                            </div>
+                            <div class="event__item__text">
+                                <h4>Fespaco</h4>
+                                <p><i class="fa fa-map-marker"></i> Maison du peuple, ouagadougou, Burkina</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Event Section End -->
+
+ <!-- Event Section Begin -->
+ <section class="event spad">
+    <div class="container">
+          
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>A la une des Festivals</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="event__slider owl-carousel">
+                <div class="col-lg-4">
+                    <div class="event__item">
+                        <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/events/event-1.jpg')}}">
+                            <div class="tag-date">
+                                <span>02 Aout 2021</span>
+                            </div>
+                        </div>
+                        <div class="event__item__text">
+                            <h4>Semaine Nationale de la culture(SNC) </h4>
+                            <p><i class="fa fa-map-marker"></i>Palais de la culture, Bobo Dioulasso, Burkina</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="event__item">
+                        <div class="event__item__pic set-bg" data-setbg="assets/img/events/event-2.jpg">
+                            <div class="tag-date">
+                                <span>27 Mars 2021</span>
+                            </div>
+                        </div>
+                        <div class="event__item__text">
+                            <h4>Nuit Httypique de koudougou(NAK)</h4>
+                            <p><i class="fa fa-map-marker"></i> Maison du peuple, Koudougou, Burkina</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="event__item">
+                        <div class="event__item__pic set-bg" data-setbg="assets/img/events/event-3.jpg">
+                            <div class="tag-date">
+                                <span>15 Decembre 2020 à 10h00</span>
+                            </div>
+                        </div>
+                        <div class="event__item__text">
+                            <h4>BF1 Freestyle</h4>
+                            <p><i class="fa fa-map-marker"></i> Cenasa, ouagadougou, Burkina</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="event__item">
+                        <div class="event__item__pic set-bg" data-setbg="assets/img/events/event-2.jpg">
+                            <div class="tag-date">
+                                <span>5 Decembre 2020 à 14h00</span>
+                            </div>
+                        </div>
+                        <div class="event__item__text">
+                            <h4>Fespaco</h4>
+                            <p><i class="fa fa-map-marker"></i> Maison du peuple, ouagadougou, Burkina</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Event Section End -->
+
+ <!-- Event Section Begin -->
+ <section class="event spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>A la une des Rencontres et conferences</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="event__slider owl-carousel">
+                <div class="col-lg-4">
+                    <div class="event__item">
+                        <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/events/event-1.jpg')}}">
+                            <div class="tag-date">
+                                <span>02 Aout 2021</span>
+                            </div>
+                        </div>
+                        <div class="event__item__text">
+                            <h4>Semaine Nationale de la culture(SNC) </h4>
+                            <p><i class="fa fa-map-marker"></i>Palais de la culture, Bobo Dioulasso, Burkina</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="event__item">
+                        <div class="event__item__pic set-bg" data-setbg="assets/img/events/event-2.jpg">
+                            <div class="tag-date">
+                                <span>27 Mars 2021</span>
+                            </div>
+                        </div>
+                        <div class="event__item__text">
+                            <h4>Nuit Httypique de koudougou(NAK)</h4>
+                            <p><i class="fa fa-map-marker"></i> Maison du peuple, Koudougou, Burkina</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="event__item">
+                        <div class="event__item__pic set-bg" data-setbg="assets/img/events/event-3.jpg">
+                            <div class="tag-date">
+                                <span>15 Decembre 2020 à 10h00</span>
+                            </div>
+                        </div>
+                        <div class="event__item__text">
+                            <h4>BF1 Freestyle</h4>
+                            <p><i class="fa fa-map-marker"></i> Cenasa, ouagadougou, Burkina</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="event__item">
+                        <div class="event__item__pic set-bg" data-setbg="assets/img/events/event-2.jpg">
+                            <div class="tag-date">
+                                <span>5 Decembre 2020 à 14h00</span>
+                            </div>
+                        </div>
+                        <div class="event__item__text">
+                            <h4>Fespaco</h4>
+                            <p><i class="fa fa-map-marker"></i> Maison du peuple, ouagadougou, Burkina</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Event Section End -->
+
+ <!-- Event Section Begin -->
+ <section class="event spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>Autres</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="event__slider owl-carousel">
+                <div class="col-lg-4">
+                    <div class="event__item">
+                        <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/events/event-1.jpg')}}">
+                            <div class="tag-date">
+                                <span>02 Aout 2021</span>
+                            </div>
+                        </div>
+                        <div class="event__item__text">
+                            <h4>Semaine Nationale de la culture(SNC) </h4>
+                            <p><i class="fa fa-map-marker"></i>Palais de la culture, Bobo Dioulasso, Burkina</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="event__item">
+                        <div class="event__item__pic set-bg" data-setbg="assets/img/events/event-2.jpg">
+                            <div class="tag-date">
+                                <span>27 Mars 2021</span>
+                            </div>
+                        </div>
+                        <div class="event__item__text">
+                            <h4>Nuit Httypique de koudougou(NAK)</h4>
+                            <p><i class="fa fa-map-marker"></i> Maison du peuple, Koudougou, Burkina</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="event__item">
+                        <div class="event__item__pic set-bg" data-setbg="assets/img/events/event-3.jpg">
+                            <div class="tag-date">
+                                <span>15 Decembre 2020 à 10h00</span>
+                            </div>
+                        </div>
+                        <div class="event__item__text">
+                            <h4>BF1 Freestyle</h4>
+                            <p><i class="fa fa-map-marker"></i> Cenasa, ouagadougou, Burkina</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="event__item">
+                        <div class="event__item__pic set-bg" data-setbg="assets/img/events/event-2.jpg">
+                            <div class="tag-date">
+                                <span>5 Decembre 2020 à 14h00</span>
+                            </div>
+                        </div>
+                        <div class="event__item__text">
+                            <h4>Fespaco</h4>
+                            <p><i class="fa fa-map-marker"></i> Maison du peuple, ouagadougou, Burkina</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Event Section End -->
+
     <!-- About Section Begin -->
     <section class="about spad">
         <div class="container">
@@ -97,19 +386,18 @@
                 <div class="col-lg-6">
                     <div class="about__pic">
                         {{-- <img src="img/about/about.png" alt=""> --}}
-                        <img src="{{asset('assets/img/about/about.png')}}">
+                        <img src="{{asset('assets/img/about/fete.png')}}">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="about__text">
                         <div class="section-title">
-                            <h2>DJ Alexandra Rud</h2>
-                            <h1>About me</h1>
+                            <h2>Voulez publier vos evenenements sur EVTICKET?</h2>
+                            <h1></h1>
                         </div>
-                        <p>DJ Rainflow knows how to move your mind, body and soul by delivering tracks that stand out
-                            from the norm. As if this impressive succession of high impact, floor-filling bombs wasn’t
-                            enough to sustain.</p>
-                        <a href="#" class="primary-btn">CONTACT ME</a>
+                        <p>Eh bien c'est bien, c'est possible!  Nous vous offrons la possibilite de publier vosevenements sur EVTICKET. Commencez a creer un compte et vous receverez une notification pour la validaton de vos donnees</p>
+                        <a href="#" class="primary-btn">Creer un compte AGENCE</a>
+                      
                     </div>
                 </div>
             </div>
@@ -120,11 +408,18 @@
     <!-- Services Section Begin -->
     <section class="services">
         <div class="container-fluid">
+                <div class="row" style="text-align:center">
+                        <div class="col-lg-12">
+                            <div class="section-title">
+                                <h2>Nos categories d'évenements</h2>
+                                <h1></h1>
+                            </div>
+                        </div>
+                </div>
             <div class="row">
+                   
                 <div class="col-lg-6 p-0">
-                    <div class="services__left set-bg" data-setbg="{{asset('assets/img/services/service-left.jpg')}}">
-                        <a href="https://www.youtube.com/watch?v=JGwWNGJdvx8" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-                    </div>
+                        <img src="{{asset('assets/img/services/special.png')}}">
                 </div>
                 <div class="col-lg-6 p-0">
                     <div class="row services__list">
@@ -132,7 +427,7 @@
                             <div class="service__item deep-bg">
                                 {{-- <img src="img/services/service-1.png" alt=""> --}}
                             <img src="{{asset('assets/img/services/service-1.png')}}" alt="" srcset="">
-                                <h4>Wedding</h4>
+                                <h4>Concerts</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
                             </div>
                         </div>
@@ -140,7 +435,7 @@
                             <div class="service__item">
                                 {{-- <img src="img/services/service-2.png" alt=""> --}}
                                 <img src="{{asset('assets/img/services/service-2.png')}}" alt="" srcset="">
-                                <h4>Clubs and bar</h4>
+                                <h4>Rencontreset conferences</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
                             </div>
                         </div>
@@ -148,7 +443,7 @@
                             <div class="service__item deep-bg">
                                 {{-- <img src="img/services/service-4.png" alt=""> --}}
                                 <img src="{{asset('assets/img/services/service-4.png')}}" alt="" srcset="">
-                                <h4>DJ lessons</h4>
+                                <h4>Festivites</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
                             </div>
                         </div>
@@ -156,7 +451,7 @@
                             <div class="service__item">
                                 {{-- <img src="img/services/service-3.png" alt=""> --}}
                                 <img src="{{asset('assets/img/services/service-3.png')}}" alt="" srcset="">
-                                <h4>Corporate events</h4>
+                                <h4>Et plus</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
                             </div>
                         </div>
@@ -173,287 +468,23 @@
             <div class="row">
                 <div class="col-lg-7">
                     <div class="section-title">
-                        <h2>Latest tracks</h2>
-                        <h1>Music podcast</h1>
+                        <h2>Tous nos evenements</h2>
+                        <h1></h1>
                     </div>
                 </div>
                 <div class="col-lg-5">
                     <div class="track__all">
-                        <a href="#" class="primary-btn border-btn">View all tracks</a>
+                        <a href="#" class="primary-btn">Voir tous nos evenenements</a>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-7 p-0">
-                    <div class="track__content nice-scroll">
-                        <div class="single_player_container">
-                            <h4>David Guetta Miami Ultra</h4>
-                            <div class="jp-jplayer jplayer" data-ancestor=".jp_container_1"
-                                data-url="music-files/1.mp3"></div>
-                            <div class="jp-audio jp_container_1" role="application" aria-label="media player">
-                                <div class="jp-gui jp-interface">
-                                    <!-- Player Controls -->
-                                    <div class="player_controls_box">
-                                        <button class="jp-play player_button" tabindex="0"></button>
-                                    </div>
-                                    <!-- Progress Bar -->
-                                    <div class="player_bars">
-                                        <div class="jp-progress">
-                                            <div class="jp-seek-bar">
-                                                <div>
-                                                    <div class="jp-play-bar">
-                                                        <div class="jp-current-time" role="timer" aria-label="time">0:00
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="jp-duration ml-auto" role="timer" aria-label="duration">00:00</div>
-                                    </div>
-                                    <!-- Volume Controls -->
-                                    <div class="jp-volume-controls">
-                                        <button class="jp-mute" tabindex="0"><i
-                                                class="fa fa-volume-down"></i></button>
-                                        <div class="jp-volume-bar">
-                                            <div class="jp-volume-bar-value" style="width: 0%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single_player_container">
-                            <h4>David Guetta Miami Ultra</h4>
-                            <div class="jp-jplayer jplayer" data-ancestor=".jp_container_2"
-                                data-url="music-files/2.mp3"></div>
-                            <div class="jp-audio jp_container_2" role="application" aria-label="media player">
-                                <div class="jp-gui jp-interface">
-                                    <!-- Player Controls -->
-                                    <div class="player_controls_box">
-                                        <button class="jp-play player_button" tabindex="0"></button>
-                                    </div>
-                                    <!-- Progress Bar -->
-                                    <div class="player_bars">
-                                        <div class="jp-progress">
-                                            <div class="jp-seek-bar">
-                                                <div>
-                                                    <div class="jp-play-bar">
-                                                        <div class="jp-current-time" role="timer" aria-label="time">0:00
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="jp-duration ml-auto" role="timer" aria-label="duration">00:00</div>
-                                    </div>
-                                    <!-- Volume Controls -->
-                                    <div class="jp-volume-controls">
-                                        <button class="jp-mute" tabindex="0"><i
-                                                class="fa fa-volume-down"></i></button>
-                                        <div class="jp-volume-bar">
-                                            <div class="jp-volume-bar-value" style="width: 0%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single_player_container">
-                            <h4>David Guetta Miami Ultra</h4>
-                            <div class="jp-jplayer jplayer" data-ancestor=".jp_container_3"
-                                data-url="music-files/3.mp3"></div>
-                            <div class="jp-audio jp_container_3" role="application" aria-label="media player">
-                                <div class="jp-gui jp-interface">
-                                    <!-- Player Controls -->
-                                    <div class="player_controls_box">
-                                        <button class="jp-play player_button" tabindex="0"></button>
-                                    </div>
-                                    <!-- Progress Bar -->
-                                    <div class="player_bars">
-                                        <div class="jp-progress">
-                                            <div class="jp-seek-bar">
-                                                <div>
-                                                    <div class="jp-play-bar">
-                                                        <div class="jp-current-time" role="timer" aria-label="time">0:00
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="jp-duration ml-auto" role="timer" aria-label="duration">00:00</div>
-                                    </div>
-                                    <!-- Volume Controls -->
-                                    <div class="jp-volume-controls">
-                                        <button class="jp-mute" tabindex="0"><i
-                                                class="fa fa-volume-down"></i></button>
-                                        <div class="jp-volume-bar">
-                                            <div class="jp-volume-bar-value" style="width: 0%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single_player_container">
-                            <h4>David Guetta Miami Ultra</h4>
-                            <div class="jp-jplayer jplayer" data-ancestor=".jp_container_4"
-                                data-url="music-files/4.mp3"></div>
-                            <div class="jp-audio jp_container_4" role="application" aria-label="media player">
-                                <div class="jp-gui jp-interface">
-                                    <!-- Player Controls -->
-                                    <div class="player_controls_box">
-                                        <button class="jp-play player_button" tabindex="0"></button>
-                                    </div>
-                                    <!-- Progress Bar -->
-                                    <div class="player_bars">
-                                        <div class="jp-progress">
-                                            <div class="jp-seek-bar">
-                                                <div>
-                                                    <div class="jp-play-bar">
-                                                        <div class="jp-current-time" role="timer" aria-label="time">0:00
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="jp-duration ml-auto" role="timer" aria-label="duration">00:00</div>
-                                    </div>
-                                    <!-- Volume Controls -->
-                                    <div class="jp-volume-controls">
-                                        <button class="jp-mute" tabindex="0"><i
-                                                class="fa fa-volume-down"></i></button>
-                                        <div class="jp-volume-bar">
-                                            <div class="jp-volume-bar-value" style="width: 0%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single_player_container">
-                            <h4>David Guetta Miami Ultra</h4>
-                            <div class="jp-jplayer jplayer" data-ancestor=".jp_container_5"
-                                data-url="music-files/5.mp3"></div>
-                            <div class="jp-audio jp_container_5" role="application" aria-label="media player">
-                                <div class="jp-gui jp-interface">
-                                    <!-- Player Controls -->
-                                    <div class="player_controls_box">
-                                        <button class="jp-play player_button" tabindex="0"></button>
-                                    </div>
-                                    <!-- Progress Bar -->
-                                    <div class="player_bars">
-                                        <div class="jp-progress">
-                                            <div class="jp-seek-bar">
-                                                <div>
-                                                    <div class="jp-play-bar">
-                                                        <div class="jp-current-time" role="timer" aria-label="time">0:00
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="jp-duration ml-auto" role="timer" aria-label="duration">00:00</div>
-                                    </div>
-                                    <!-- Volume Controls -->
-                                    <div class="jp-volume-controls">
-                                        <button class="jp-mute" tabindex="0"><i
-                                                class="fa fa-volume-down"></i></button>
-                                        <div class="jp-volume-bar">
-                                            <div class="jp-volume-bar-value" style="width: 0%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single_player_container">
-                            <h4>David Guetta Miami Ultra</h4>
-                            <div class="jp-jplayer jplayer" data-ancestor=".jp_container_6"
-                                data-url="music-files/6.mp3"></div>
-                            <div class="jp-audio jp_container_6" role="application" aria-label="media player">
-                                <div class="jp-gui jp-interface">
-                                    <!-- Player Controls -->
-                                    <div class="player_controls_box">
-                                        <button class="jp-play player_button" tabindex="0"></button>
-                                    </div>
-                                    <!-- Progress Bar -->
-                                    <div class="player_bars">
-                                        <div class="jp-progress">
-                                            <div class="jp-seek-bar">
-                                                <div>
-                                                    <div class="jp-play-bar">
-                                                        <div class="jp-current-time" role="timer" aria-label="time">0:00
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="jp-duration ml-auto" role="timer" aria-label="duration">00:00</div>
-                                    </div>
-                                    <!-- Volume Controls -->
-                                    <div class="jp-volume-controls">
-                                        <button class="jp-mute" tabindex="0"><i
-                                                class="fa fa-volume-down"></i></button>
-                                        <div class="jp-volume-bar">
-                                            <div class="jp-volume-bar-value" style="width: 0%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5 p-0">
-                    <div class="track__pic">
-                    <img src="{{asset('assets/img/track-right.jpg')}}" alt="">
-                        {{-- <img src="img/track-right.jpg" alt=""> --}}
-                    </div>
-                </div>
-            </div>
+           
         </div>
     </section>
     <!-- Track Section End -->
 
     <!-- Youtube Section Begin -->
-    <section class="youtube spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <h2>Youtube feed</h2>
-                        <h1>Latest videos</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="youtube__item">
-                        <div class="youtube__item__pic set-bg" data-setbg="{{asset('assets/img/youtube/youtube-1.jpg')}}">
-                            <a href="https://www.youtube.com/watch?v=yJg-Y5byMMw?autoplay=1" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-                        </div>
-                        <div class="youtube__item__text">
-                            <h4>David Guetta Miami Ultra Music Festival 2019</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="youtube__item">
-                        <div class="youtube__item__pic set-bg" data-setbg="{{asset('assets/img/youtube/youtube-2.jpg')}}">
-                            <a href="https://www.youtube.com/watch?v=K4DyBUG242c?autoplay=1" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-                        </div>
-                        <div class="youtube__item__text">
-                            <h4>Martin Garrix (Full live-set) | SLAM!Koningsdag</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="youtube__item">
-                        <div class="youtube__item__pic set-bg" data-setbg="{{asset('assets/img/youtube/youtube-3.jpg')}}">
-                            <a href="https://www.youtube.com/watch?v=S19UcWdOA-I?autoplay=1" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-                        </div>
-                        <div class="youtube__item__text">
-                            <h4>Dimitri Vegas, Steve Aoki & Like Mike’s “3 Are Legend”</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   
     <!-- Youtube Section End -->
 
     <!-- Countdown Section Begin -->
@@ -462,17 +493,17 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="countdown__text">
-                        <h1>Tomorrowland 2020</h1>
-                        <h4>Music festival start in</h4>
+                        <h1>Prom'tickets</h1>
+                        <h4>Fin de la promo dans:</h4>
                     </div>
                     <div class="countdown__timer" id="countdown-time">
                         <div class="countdown__item">
                             <span>20</span>
-                            <p>days</p>
+                            <p>Jours</p>
                         </div>
                         <div class="countdown__item">
-                            <span>45</span>
-                            <p>hours</p>
+                            <span>15</span>
+                            <p>Heures</p>
                         </div>
                         <div class="countdown__item">
                             <span>18</span>
@@ -480,11 +511,11 @@
                         </div>
                         <div class="countdown__item">
                             <span>09</span>
-                            <p>seconds</p>
+                            <p>secondes</p>
                         </div>
                     </div>
                     <div class="buy__tickets">
-                        <a href="#" class="primary-btn">Buy tickets</a>
+                        <a href="#" class="primary-btn">Acheter Vos tickets</a>
                     </div>
                 </div>
             </div>
@@ -501,20 +532,20 @@
                         <ul>
                             <li>
                                 <i class="fa fa-phone"></i>
-                                <p>Phone</p>
-                                <h6>1-677-124-44227</h6>
+                                <p>Telephone</p>
+                                <h6>+226 73796245</h6>
                             </li>
                             <li>
                                 <i class="fa fa-envelope"></i>
                                 <p>Email</p>
-                                <h6>DJ.Music@gmail.com</h6>
+                                <h6>Sidikiouedraogo2000@gmail.com</h6>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-4 offset-lg-1 col-md-6">
                     <div class="footer__social">
-                        <h2>DJoz</h2>
+                        <h2>EVTICKET</h2>
                         <div class="footer__social__links">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
@@ -525,7 +556,7 @@
                 </div>
                 <div class="col-lg-3 offset-lg-1 col-md-6">
                     <div class="footer__newslatter">
-                        <h4>Stay With me</h4>
+                        <h4>Envoyer nous un mail</h4>
                         <form action="#">
                             <input type="text" placeholder="Email">
                             <button type="submit"><i class="fa fa-send-o"></i></button>
@@ -535,7 +566,9 @@
             </div>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 			<div class="footer__copyright__text">
-				<p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+                <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved
+                     | Ce site a été concu avec <i class="fa fa-heart" aria-hidden="true"></i> par toute l'equipe de EVTICKET  
+                    </p>
 			</div>
 			<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
         </div>

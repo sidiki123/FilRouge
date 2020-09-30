@@ -192,6 +192,11 @@ class AdminController extends Controller
         return view('auth/register-agence');
     }
 
+    public function accueil()
+    {
+        return view('djoz/index');
+    }
+
     /**
      * Create a new user instance after a valid registration.
      *

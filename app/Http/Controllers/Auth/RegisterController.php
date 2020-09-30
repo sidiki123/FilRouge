@@ -59,10 +59,10 @@ use Notifiable;
         if($user){
             $user->update(['confirmation_token'=>null]);
             $this->guard()->login($user);
-            return redirect($this->redirectPath())->with('success','Votre cmpgte a été confirmé');
+            return redirect($this->redirectPath())->with('success','Votre compte a été confirmé');
         }
         else{
-            return redirect('/login')->with('error','ce lien semmble invalide');
+            return redirect('/login')->with('error','ce lien semble invalide');
         }
     }
 

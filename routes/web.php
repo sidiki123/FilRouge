@@ -20,11 +20,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', function () {
     return view('djoz/index');
-})->name('home');
+})->name('accueil');
 
 Route::get('/about', function () {
     return view('djoz/about');
@@ -45,6 +44,7 @@ Route::get('/videos', function () {
 Route::get('dashboard', function() {
     return view('Admin/vali-admin-master/docs/dashboard');
 });
+Route::get('/', 'AdminController@accueil')->name('accueil');
 
 Route::get('/blank-page', 'AdminController@blank_page')->name('blank-page');
 Route::get('/page-login', 'AdminController@page_login')->name('page-login');

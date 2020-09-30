@@ -54,11 +54,13 @@
                     <div class="header__nav">
                         <nav class="header__menu mobile-menu">
                             <ul>
-                            <li class="active"><a href="{{route('home')}}">Accueil</a></li>
+                            <li class="active"><a href="{{route('accueil')}}">Accueil</a></li>
+                            <li><a href="{{route('tours')}}">A la une</a></li>
+                            <li><a href="{{route('discography')}}">Evenements</a></li>
                                 <li ><a href="{{route('about')}}">A propos</a></li>
-                                <li><a href="{{route('discography')}}">Evenements</a></li>
-                                <li><a href="{{route('tours')}}">A la une</a></li>
-                                <li><a href="{{route('videos')}}">Videos</a></li>
+                                
+                                
+                                {{-- <li><a href="{{route('videos')}}">Videos</a></li> --}}
                                 <!-- <li><a href="#">Pages</a>
                                     <ul class="dropdown">
                                         <li><a href="./about.html">About</a></li>
@@ -68,12 +70,12 @@
                                 </li> -->
                                 @guest
                                 <li>
-                                    <a class="nav-link" href="{{ route('login') }}">Login</a>
+                                    <a class="nav-link" href="{{ route('login') }}">Se connecter</a>
                                 </li>
                                 @if (Route::has('register'))
                                    
                                         
-                                        <li><a class="primary-btn">register</a>
+                                        <li><a class="primary-btn">Creer un compte</a>
                                             <ul class="dropdown">
                                                 <li><a href="{{ route('register') }}" >Visiteur</a></li>
                                                 <li><a href="{{ route('register_agence') }}" >Agence</a></li>
