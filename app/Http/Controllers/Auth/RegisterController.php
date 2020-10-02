@@ -29,7 +29,7 @@ class RegisterController extends Controller
     */
 
     use RegistersUsers;
-use Notifiable;
+    use Notifiable;
     /**
      * Where to redirect users after registration.
      *

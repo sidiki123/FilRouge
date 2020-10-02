@@ -34,7 +34,7 @@
                     <div class="event__slider owl-carousel">
                         <div class="col-lg-4">
                             <div class="event__item">
-                                <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/events/event-1.jpg')}}">
+                                <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/real/woman.jpg')}}">
                                     <div class="tag-date">
                                         <span>02 Aout 2021</span>
                                     </div>
@@ -47,7 +47,7 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="event__item">
-                                <div class="event__item__pic set-bg" data-setbg="assets/img/events/event-2.jpg">
+                                <div class="event__item__pic set-bg" data-setbg="assets/img/real/woman.jpg">
                                     <div class="tag-date">
                                         <span>27 Mars 2021</span>
                                     </div>
@@ -60,7 +60,7 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="event__item">
-                                <div class="event__item__pic set-bg" data-setbg="assets/img/events/event-3.jpg">
+                                <div class="event__item__pic set-bg" data-setbg="assets/img/real/orphan.jpg">
                                     <div class="tag-date">
                                         <span>15 Decembre 2020 à 10h00</span>
                                     </div>
@@ -73,7 +73,7 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="event__item">
-                                <div class="event__item__pic set-bg" data-setbg="assets/img/events/event-2.jpg">
+                                <div class="event__item__pic set-bg" data-setbg="assets/img/real/angola.jpg">
                                     <div class="tag-date">
                                         <span>5 Decembre 2020 à 14h00</span>
                                     </div>
@@ -112,7 +112,7 @@
                 <div class="event__slider owl-carousel">
                     <div class="col-lg-4">
                         <div class="event__item">
-                            <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/events/event-1.jpg')}}">
+                            <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/real/adorable.jpg')}}">
                                 <div class="tag-date">
                                     <span>02 Aout 2021</span>
                                 </div>
@@ -125,7 +125,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="event__item">
-                            <div class="event__item__pic set-bg" data-setbg="assets/img/events/event-2.jpg">
+                            <div class="event__item__pic set-bg" data-setbg="assets/img/real/african-american.jpg">
                                 <div class="tag-date">
                                     <span>27 Mars 2021</span>
                                 </div>
@@ -138,7 +138,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="event__item">
-                            <div class="event__item__pic set-bg" data-setbg="assets/img/events/event-3.jpg">
+                            <div class="event__item__pic set-bg" data-setbg="assets/img/real/african.jpg">
                                 <div class="tag-date">
                                     <span>15 Decembre 2020 à 10h00</span>
                                 </div>
@@ -151,7 +151,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="event__item">
-                            <div class="event__item__pic set-bg" data-setbg="assets/img/events/event-2.jpg">
+                            <div class="event__item__pic set-bg" data-setbg="assets/img/real/audio.jpg">
                                 <div class="tag-date">
                                     <span>5 Decembre 2020 à 14h00</span>
                                 </div>
@@ -183,7 +183,7 @@
             <div class="event__slider owl-carousel">
                 <div class="col-lg-4">
                     <div class="event__item">
-                        <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/events/event-1.jpg')}}">
+                        <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/real/audio.jpg')}}">
                             <div class="tag-date">
                                 <span>02 Aout 2021</span>
                             </div>
@@ -196,7 +196,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="event__item">
-                        <div class="event__item__pic set-bg" data-setbg="assets/img/events/event-2.jpg">
+                        <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/real/children.jpg')}}">
                             <div class="tag-date">
                                 <span>27 Mars 2021</span>
                             </div>
@@ -209,7 +209,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="event__item">
-                        <div class="event__item__pic set-bg" data-setbg="assets/img/events/event-3.jpg">
+                        <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/real/couple.jpg')}}">
                             <div class="tag-date">
                                 <span>15 Decembre 2020 à 10h00</span>
                             </div>
@@ -222,7 +222,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="event__item">
-                        <div class="event__item__pic set-bg" data-setbg="assets/img/events/event-2.jpg">
+                        <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/real/lady.jpg')}}">
                             <div class="tag-date">
                                 <span>5 Decembre 2020 à 14h00</span>
                             </div>
@@ -253,7 +253,7 @@
             <div class="event__slider owl-carousel">
                 <div class="col-lg-4">
                     <div class="event__item">
-                        <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/events/event-1.jpg')}}">
+                        <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/real/memorial.jpg')}}">
                             <div class="tag-date">
                                 <span>02 Aout 2021</span>
                             </div>
@@ -266,7 +266,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="event__item">
-                        <div class="event__item__pic set-bg" data-setbg="assets/img/events/event-2.jpg">
+                        <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/real/audio.jpg')}}">
                             <div class="tag-date">
                                 <span>27 Mars 2021</span>
                             </div>
@@ -279,7 +279,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="event__item">
-                        <div class="event__item__pic set-bg" data-setbg="assets/img/events/event-3.jpg">
+                        <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/real/orphan.jpg')}}">
                             <div class="tag-date">
                                 <span>15 Decembre 2020 à 10h00</span>
                             </div>
@@ -292,7 +292,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="event__item">
-                        <div class="event__item__pic set-bg" data-setbg="assets/img/events/event-2.jpg">
+                        <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/real/smile.jpg')}}">
                             <div class="tag-date">
                                 <span>5 Decembre 2020 à 14h00</span>
                             </div>

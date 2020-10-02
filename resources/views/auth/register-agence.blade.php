@@ -1,4 +1,4 @@
-@extends('layouts.app')
+
 
 <!DOCTYPE html>
 <html>
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{asset('admin_assets/css/main.css')}}">
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Login - Vali Admin</title>
+    <title>Connexion -EVTICKET</title>
   </head>
   <body>
     <section class="material-half-bg">
@@ -18,13 +18,13 @@
     </section>
     <section class="login-content">
       <div class="logo">
-        <h1>Vali</h1>
+        <h1></h1>
       </div>
         <div class="login-box">
          <!-- <form class="login-form" action="index.html"> -->
          <form class="login-form" method="POST" action="{{ route('register_agence_store') }}">
          @csrf
-          <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>SIGN IN</h3>
+          <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>Creation de compte-Agence</h3>
           <div class="form-group">
             <label class="control-label">Nom</label>
             <input  id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -46,7 +46,7 @@
           </div>
 
           <div class="form-group">
-            <label class="control-label">Telephone</label>
+            <label class="control-label">Numero Personnel</label>
             <input  id="name" type="tel" class="form-control @error('name') is-invalid @enderror" name="telephone" value="{{ old('name') }}" required autocomplete="name" autofocus>
             @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -66,8 +66,8 @@
           </div>
 
           <div class="form-group">
-            <label class="control-label">Telephone de l'agence</label>
-            <input  id="name" type="number" class="form-control @error('name') is-invalid @enderror" name="telephone_agence" value="{{ old('name') }}" required autocomplete="name" autofocus>
+            <label class="control-label">Contact de l'agence</label>
+            <input  id="name" type="tel" class="form-control @error('name') is-invalid @enderror" name="telephone_agence" value="{{ old('name') }}" required autocomplete="name" autofocus>
             @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -77,7 +77,7 @@
           
 
           <div class="form-group">
-            <label class="control-label">email</label>
+            <label class="control-label">Adresse mail</label>
             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
             @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -86,7 +86,7 @@
             @enderror
           </div>
           <div class="form-group">
-            <label class="control-label">PASSWORD</label>
+            <label class="control-label">Mot de passe</label>
             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
             @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -95,7 +95,7 @@
              @enderror
           </div>
           <div class="form-group">
-            <label class="control-label">{{ __('Confirm Password') }}</label>
+            <label class="control-label">Confirmer votre mot de passe</label>
             <input  id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
             @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -106,7 +106,7 @@
               
             
           <div class="form-group btn-container">
-            <button class="btn btn-primary btn-block" type="submit"><i class="fa fa-sign-in fa-lg fa-fw"></i>SIGN IN</button>
+            <button class="btn btn-primary btn-block" type="submit"><i class="fa fa-sign-in fa-lg fa-fw"></i>Creer</button>
           </div>
          </form>
         </div>

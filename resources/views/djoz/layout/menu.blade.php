@@ -47,7 +47,7 @@
             <div class="row">
                 <div class="col-lg-2 col-md-2">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="{{asset('assets/img/logo.png')}}" alt=""></a>
+                        <a href="./index.html"><img src="{{asset('assets/img/EVTICKET.png')}}" alt="" width="50%"</a>
                     </div>
                 </div>
                 <div class="col-lg-10 col-md-10">
@@ -73,7 +73,7 @@
                                     <a class="nav-link" href="{{ route('login') }}">Se connecter</a>
                                 </li>
                                 @if (Route::has('register'))
-                                   
+                                   {{-- 74437847 --}}
                                         
                                         <li><a class="primary-btn">Creer un compte</a>
                                             <ul class="dropdown">
@@ -94,7 +94,7 @@
                                         <a href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">
-                                            {{ __('Logout') }}
+                                            {{ __('Se deconnecter') }}
                                         </a>
                                        
     
@@ -103,10 +103,11 @@
                                         </form>
                                         
                                     </li>
+                                    @can('access')
                                     <li><a href="{{ route('dashboard') }}">
-                                            {{ __('Dashboard') }}
+                                            {{ __('Tableau de bord') }}
                                         </a></li>
-                                       
+                                    @endcan
                                     </ul>
     
                                    

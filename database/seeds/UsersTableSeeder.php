@@ -19,9 +19,9 @@ class UsersTableSeeder extends Seeder
         User::truncate();
         DB::table('role_user')->truncate();
 
-       $admin= User::create(['name'=>'sidiki','email'=>'sidikioue@fdd.gg','password'=>Hash::make('password')]);
-       $agence= User::create(['name'=>'papi','email'=>'papi@fdd.gg','password'=>Hash::make('password')]);
-       $visiteur= User::create(['name'=>'messi','email'=>'essi@fdd.gg','password'=>Hash::make('password')]);
+       $admin= User::create(['name'=>'admin','email'=>'admin@admin.com','password'=>Hash::make('password')]);
+       $agence= User::create(['name'=>'agence','email'=>'agence@agence.com','password'=>Hash::make('password')]);
+       $visiteur= User::create(['name'=>'visiteur','email'=>'visiteur@visiteur.com','password'=>Hash::make('password')]);
 
         $adminRole=Role::where('name','admin')->first();
         $agenceRole=Role::where('name','agence')->first();

@@ -6,13 +6,10 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
-use Illuminate\Auth\Events\Registered;
 
-
-class RegisteredUser extends Notification
+class RegisteredAgence extends Notification
 {
     use Queueable;
-    // use Notification;
 
     /**
      * Create a new notification instance.
@@ -33,8 +30,6 @@ class RegisteredUser extends Notification
     public function via($notifiable)
     {
         return ['mail'];
-        return ['role'];
-
     }
 
     /**
@@ -47,8 +42,7 @@ class RegisteredUser extends Notification
     {
         return (new MailMessage)
         ->subject('Inscription sur Evtivket')
-        ->line("Votre compte a été crée; cliquez sur ce lien pour l'activer.")
-        ->action('Confirmer mon compte', url("/confirm/{$notifiable->id}/" . urlencode($notifiable->confirmation_token)))
+        ->line("Votre compte Agence a été crée avec succes mais reste inactif. Vous recevrez un mail d'activation dans les heures .")
         ->line('Merci.');
     }
 

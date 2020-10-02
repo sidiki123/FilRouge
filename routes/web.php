@@ -25,15 +25,15 @@ Route::get('/', function () {
     return view('djoz/index');
 })->name('accueil');
 
-Route::get('/about', function () {
+Route::get('/a-propos', function () {
     return view('djoz/about');
 })->name('about');
 
-Route::get('/discography', function () {
+Route::get('/events', function () {
     return view('djoz/discography');
 })->name('discography');
 
-Route::get('/tours', function () {
+Route::get('/a-la-une', function () {
     return view('djoz/tours');
 })->name('tours');
 
@@ -41,15 +41,13 @@ Route::get('/videos', function () {
     return view('djoz/videos');
 })->name('videos');
 
-Route::get('dashboard', function() {
-    return view('Admin/vali-admin-master/docs/dashboard');
-});
+
 Route::get('/', 'AdminController@accueil')->name('accueil');
 
 Route::get('/blank-page', 'AdminController@blank_page')->name('blank-page');
 Route::get('/page-login', 'AdminController@page_login')->name('page-login');
 Route::get('/page-register', 'AdminController@page_register')->name('page-register');
-Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
+Route::get('/dashboard', 'AdminController@dashboard')->middleware('can:access')->name('dashboard');
 // Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
 Route::get('/register_agence', 'AdminController@register_agence')->name('register_agence');
 Route::post('/register_agence_store', 'AdminController@register_agence_store')->name('register_agence_store');
