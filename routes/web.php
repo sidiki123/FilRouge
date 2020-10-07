@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Tableau_de_bord\AdminController;
+use App\Http\Controllers\PermissionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,25 +42,32 @@ Route::get('/a-la-une', function () {
 Route::get('/videos', function () {
     return view('djoz/videos');
 })->name('videos');
-
-
-Route::get('/', 'AdminController@accueil')->name('accueil');
-
-Route::get('/blank-page', 'AdminController@blank_page')->name('blank-page');
-Route::get('/page-login', 'AdminController@page_login')->name('page-login');
-Route::get('/page-register', 'AdminController@page_register')->name('page-register');
-Route::get('/dashboard', 'AdminController@dashboard')->middleware('can:access')->name('dashboard');
-// Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
-Route::get('/register_agence', 'AdminController@register_agence')->name('register_agence');
-Route::post('/register_agence_store', 'AdminController@register_agence_store')->name('register_agence_store');
+Route::get('page-login', [PermissionController::class, 'page-login'])->name('page-login');
+Route::get('page-register',[  PermissionController::class, 'page-register'])->name('page-register');
+Route::get('register_agence',[  PermissionController::class, 'register_agence'])->name('register_agence');
+Route::post('/register_agence_store',[PermissionController::class, 'register_agence_store'])->name('register_agence_store');
 Route::get('/confirm/{id}/{token}', 'Auth\RegisterController@confirm');
-// Route::get('/confirm/{id}/{token}', 'Auth\AdminController@confirm');
 
-// Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
-// Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
-// Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
-// Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
-// Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
-// Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
-// Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
-// Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
+Route::namespace('Tableau_de_bord')->middleware('can:access')->group(function () {
+  
+Route::get('/Tableau_de_bord', [AdminController::class, 'dashboard'])->name('dashboard');
+Route::get('Tableau_de_bord/blank-page', [AdminController::class, 'blank_page'])->name('blank_page');
+Route::get('Tableau_de_bord/bootstrap_components', [AdminController::class, 'bootstrap_components'])->name('bootstrap_components');
+Route::get('Tableau_de_bord/charts', [AdminController::class, 'charts'])->name('charts');
+Route::get('Tableau_de_bord/docs', [AdminController::class, 'docs'])->name('docs');
+Route::get('Tableau_de_bord/form_components', [AdminController::class, 'form_components'])->name('form_components');
+Route::get('Tableau_de_bord/form_custom', [AdminController::class, 'form_custom'])->name('form_custom');
+Route::get('Tableau_de_bord/form_notifications',[AdminController::class, 'form_notifications'])->name('form_notifications');
+Route::get('Tableau_de_bord/form_sample', [AdminController::class, 'form_sample'])->name('form_sample');
+Route::get('Tableau_de_bord/page_calendar', [AdminController::class, 'page_calendar'])->name('page_calendar');
+Route::get('Tableau_de_bord/page_error',[AdminController::class, 'page_error'])->name('page_error');
+Route::get('Tableau_de_bord/page_invoice', [AdminController::class, 'page_invoice'])->name('page_invoice');
+Route::get('Tableau_de_bord/page_lockscreen', [AdminController::class, 'page_lockscreen'])->name('page_lockscreen');
+Route::get('Tableau_de_bord/page_mailbox', [AdminController::class, 'page_mailbox'])->name('page_mailbox');
+Route::get('Tableau_de_bord/page_user', [AdminController::class, 'page_user'])->name('page_user');
+Route::get('Tableau_de_bord/table_basic', [AdminController::class, 'table_basic'])->name('table_basic');
+Route::get('Tableau_de_bord/table_data_table', [AdminController::class, 'table_data_table'])->name('table_data_table');
+Route::get('Tableau_de_bord/widgets', [AdminController::class, 'widgets'])->name('widgets');
+Route::get('Tableau_de_bord/ui_cards', [AdminController::class, 'ui_cards'])->name('ui_cards');
+});
+

@@ -63,5 +63,6 @@
         </div>
       </div>
     </main>
+    @include('Admin/vali-admin-master/docs/inc.script')
   </body>
 </html>

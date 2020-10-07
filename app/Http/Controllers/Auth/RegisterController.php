@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Notifications\RegisteredUser;
 use App\Role;
 use Illuminate\Notifications\Notifiable;
+use Flashy;
 
 class RegisterController extends Controller
 {
@@ -59,7 +60,9 @@ class RegisterController extends Controller
         if($user){
             $user->update(['confirmation_token'=>null]);
             $this->guard()->login($user);
-            return redirect($this->redirectPath())->with('success','Votre compte a été confirmé');
+            Flashy::success('Votre compte a été crée, veuillez verifier votre boite mail','/confirm/{id}/{token}');
+            return redirect($this->redirectPath());
+           
         }
         else{
             return redirect('/login')->with('error','ce lien semble invalide');
@@ -99,6 +102,7 @@ class RegisterController extends Controller
         ]);
         $role = new Role(['name' => 'visiteur']);
         $user->roles()->save($role);
+        Flashy::success('Votre compte a été crée, veuillez verifier votre boite mail','/confirm/{id}/{token}');
         return $user;
     }
 

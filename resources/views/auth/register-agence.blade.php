@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{asset('admin_assets/css/main.css')}}">
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    @include('flashy::message')
     <title>Connexion -EVTICKET</title>
   </head>
   <body>
@@ -120,5 +121,7 @@
       	return false;
       });
     </script>
+    <script src="//code.jquery.com/jquery.js"></script>
+    @include('flashy::message')
   </body>
 </html>

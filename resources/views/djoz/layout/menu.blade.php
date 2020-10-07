@@ -47,7 +47,7 @@
             <div class="row">
                 <div class="col-lg-2 col-md-2">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="{{asset('assets/img/EVTICKET.png')}}" alt="" width="50%"</a>
+                        <a href="./index.html"><img src="{{asset('assets/img/EVTICKET.png')}}" alt="" width="50%" height="100px"></a>
                     </div>
                 </div>
                 <div class="col-lg-10 col-md-10">

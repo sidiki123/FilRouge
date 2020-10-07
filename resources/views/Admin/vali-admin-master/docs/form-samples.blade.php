@@ -16,48 +16,52 @@
           <div class="tile">
             <h3 class="tile-title">Vertical Form</h3>
             <div class="tile-body">
-              <form>
+              <form method="POST" action="{{ route('register_agence_store') }}">
+                @csrf
                 <div class="form-group">
-                  <label class="control-label">Name</label>
-                  <input class="form-control" type="text" placeholder="Enter full name">
+                  <label class="control-label">Nom</label>
+                  <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                  @error('name')
+                  <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                  </span>
+                  @enderror
                 </div>
                 <div class="form-group">
-                  <label class="control-label">Email</label>
-                  <input class="form-control" type="email" placeholder="Enter email address">
+                  <label class="control-label">Adresse mail</label>
+                  <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                  @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                  @enderror
                 </div>
                 <div class="form-group">
-                  <label class="control-label">Address</label>
-                  <textarea class="form-control" rows="4" placeholder="Enter your address"></textarea>
+                  <label class="control-label">Mot de passe</label>
+                  <input class="form-control" rows="4" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                  @error('password')
+                  <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                  </span>
+                  @enderror
                 </div>
+
                 <div class="form-group">
-                  <label class="control-label">Gender</label>
-                  <div class="form-check">
-                    <label class="form-check-label">
-                      <input class="form-check-input" type="radio" name="gender">Male
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <label class="form-check-label">
-                      <input class="form-check-input" type="radio" name="gender">Female
-                    </label>
-                  </div>
+                  <label class="control-label">Confirmer le mot de passe</label>
+                  <input class="form-control" rows="4" id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                  @error('password')
+                  <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                  </span>
+                  @enderror
                 </div>
-                <div class="form-group">
-                  <label class="control-label">Identity Proof</label>
-                  <input class="form-control" type="file">
-                </div>
-                <div class="form-group">
-                  <div class="form-check">
-                    <label class="form-check-label">
-                      <input class="form-check-input" type="checkbox">I accept the terms and conditions
-                    </label>
-                  </div>
+                <div class="tile-footer">
+                  <button class="btn btn-primary" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Enregistrer</button>
+                  &nbsp;&nbsp;&nbsp;<a class="btn btn-secondary" href="#"><i class="fa fa-fw fa-lg fa-times-circle"></i>Cancel</a>
                 </div>
               </form>
             </div>
-            <div class="tile-footer">
-              <button class="btn btn-primary" type="button"><i class="fa fa-fw fa-lg fa-check-circle"></i>Register</button>&nbsp;&nbsp;&nbsp;<a class="btn btn-secondary" href="#"><i class="fa fa-fw fa-lg fa-times-circle"></i>Cancel</a>
-            </div>
+            
           </div>
         </div>
         <div class="col-md-6">

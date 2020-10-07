@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Tableau_de_bord;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Redirect;
 use App\Providers\RouteServiceProvider;
+use App\Event;
 
 class AdminController extends Controller
 {
-    protected $guard = 'Admin';
     use RegistersUsers;
     use Notifiable;
    
@@ -29,24 +29,6 @@ class AdminController extends Controller
      */
     
 
-    function register(Request $request){
-        $this->validator($request->all())->validate();
-        event(new Registered( $user=$this->create($request->all())));
-        $user->notify(new RegisteredUser);
-        return redirect('/login')->with('success','Votre compte a été crée, veuillez verifier votre boite mail');
-    }
-    
-    public function confirm($id, $token){
-        $user= User::where('id', $id)->where('confirmation_token',$token)->first();
-        if($user){
-            $user->update(['confirmation_token'=>null]);
-            $this->guard()->login($user);
-            return redirect($this->redirectPath())->with('success','Votre compte a été confirmé');
-        }
-        else{
-            return redirect('/login')->with('error','ce lien semble invalide');
-        }
-    }
     // public function __construct()
     // {
     //     $this->middleware('auth');
@@ -166,7 +148,7 @@ class AdminController extends Controller
     }
 
     public function form_sample(){
-        return view('Admin/vali-admin-master/docs/form-sample');
+        return view('Admin/vali-admin-master/docs/form-samples');
     }
 
     
@@ -187,13 +169,7 @@ class AdminController extends Controller
         return view('Admin/vali-admin-master/docs/page-lockscreen');
     }
 
-    public function page_login(){
-        return view('Admin/vali-admin-master/docs/page-login');
-    }
-
-    public function page_register(){
-        return view('Admin/vali-admin-master/docs/page-register');
-    }
+   
 
     public function page_mailbox(){
         return view('Admin/vali-admin-master/docs/page-mailbox');
@@ -208,7 +184,8 @@ class AdminController extends Controller
     }
 
     public function table_data_table(){
-        return view('Admin/vali-admin-master/docs/table-data-table');
+        $events = Event::all();
+        return view('Admin/vali-admin-master/docs/table-data-table', compact('events'));
     }
 
     public function ui_cards(){
@@ -219,9 +196,7 @@ class AdminController extends Controller
         return view('Admin/vali-admin-master/docs/widgets');
     }
 
-    public function register_agence(){
-        return view('auth/register-agence');
-    }
+   
 
     public function accueil()
     {
@@ -235,24 +210,5 @@ class AdminController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function register_agence_store(Request $request)
-    {
-        $user = new User([
-            'name' => $request->get('name'),
-            'prenom' => $request->get('prenom'),
-            'telephone' => $request->get('telephone'),
-            'nom_agence' => $request->get('nom_agence'),
-            'email' => $request->get('email'),
-            'password' =>Hash::make($request->get('password')),
-            // 'confirmation_token' => str_replace(['/','', bcrypt(Str::random(16))]),
-        ]);
-        $user->save();
-        
-        $role = new Role(['name' => 'agence']);
-        $user->roles()->save($role);
-        return redirect()->route('login')->with('user');
-        
-        
-       
-    }
+   
 }
