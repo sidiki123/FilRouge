@@ -13,9 +13,9 @@ class CategoriesTableSeeder extends Seeder
     public function run()
     {
         $faker = Faker\Factory::create();
-        for ($i=0; $i <10 ; $i++) { 
+        for ($i=0; $i <5 ; $i++) { 
            Categorie::create([
-               'nom' => $faker->sentence(2),
+               'nom' => $faker->sentence(1),
                
            ]);
         }

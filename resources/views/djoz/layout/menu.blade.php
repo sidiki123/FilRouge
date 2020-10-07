@@ -11,18 +11,19 @@
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{{asset('assets/img/EVTICKET.png')}}" type="image/x-icon">
 
     <!-- Css Styles -->
-        <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}" type="text/css">    
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}" type="text/css">    
        
 
-        <!-- Fonts -->
-        <link rel="dns-prefetch" href="//fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-        <!-- Styles -->
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-<link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}" type="text/css">  
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}" type="text/css">  
     <link rel="stylesheet" href="{{asset('assets/css/font-awesome.min.css')}}"  type="text/css">
     <link rel="stylesheet" href="{{asset('assets/css/barfiller.css')}}"  type="text/css">
     <link rel="stylesheet" href="{{asset('assets/css/nowfont.css')}}"  type="text/css">
@@ -47,7 +48,7 @@
             <div class="row">
                 <div class="col-lg-2 col-md-2">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="{{asset('assets/img/EVTICKET.png')}}" alt="" width="50%" height="100px"></a>
+                        <a href="./index.html"><img src="{{asset('assets/img/Ev.png')}}" alt="" height="60vh"></a>
                     </div>
                 </div>
                 <div class="col-lg-10 col-md-10">

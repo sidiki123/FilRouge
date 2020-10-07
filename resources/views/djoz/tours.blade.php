@@ -41,38 +41,38 @@
     <section class="tours spad">
         <div class="container">
             <div class="row">
+                @foreach($events as $event)
                 <div class="col-lg-6 order-lg-1">
                         <div class="col-lg-12 order-lg-4">
                                 <div class="tours__item__pic">
-                                    <img src="{{asset('assets/img/real/dog.jpg')}}" alt="">
+                                    {{-- <img src="{{asset('assets/img/real/dog.jpg')}}" alt=""> --}}
+                                <img src="{{$event->photo}}" alt="">
                                 </div>
                             </div>
                     <div class="tours__item__text">
-                        <h2>Daka Festival 2020</h2>
+                        <h2>{{$event->titre}}</h2>
                         <div class="tours__text__widget">
                             <ul>
                                 <li>
                                     <i class="fa fa-clock-o"></i>
-                                    <span>8:00</span>
-                                    <span>Dec 15, 2020</span>
+                                    <span>{{$event->heure}}</span>
+                                    <span>{{$event->date_debut}}</span>
                                 </li>
                                 <li>
                                     <i class="fa fa-map-marker"></i>
-                                   Cissin,Ouagadougou, Burkina faso
+                                    {{$event->lieu}}
                                 </li>
                             </ul>
-                            <div class="price">Gratuit</div>
+                            <div class="price">{{$event->prix}}</div>
                         </div>
                         <div class="tours__text__desc">
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores exercitationem inventore harum
-                                , doloribus iure officia maxime recusandae!</p>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores exercitationem inventore harum
-                                    , doloribus iure officia maxime recusandae!</p>
+                            <p>{{$event->description}}</p>
+                            
                         </div>
                         <a href="#" class="primary-btn">Reserver</a>
                     </div>
                 </div>
-                
+                @endforeach
                 <div class="col-lg-6 order-lg-1">
                         <div class="col-lg-12 order-lg-4">
                                 <div class="tours__item__pic">

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Tableau_de_bord\AdminController;
 use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,26 +23,31 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/', [PageController::class, 'accueil'])->name('accueil');
+Route::get('a-propos', [PageController::class, 'about'])->name('about');
+Route::get('events', [PageController::class, 'discography'])->name('discography');
+Route::get('a-la-une', [PageController::class, 'tours'])->name('tours');
+Route::get('videos', [PageController::class, 'videos'])->name('videos');
 
-Route::get('/', function () {
-    return view('djoz/index');
-})->name('accueil');
+// Route::get('/', function () {
+//     return view('djoz/index');
+// })->name('accueil');
 
-Route::get('/a-propos', function () {
-    return view('djoz/about');
-})->name('about');
+// Route::get('/a-propos', function () {
+//     return view('djoz/about');
+// })->name('about');
 
-Route::get('/events', function () {
-    return view('djoz/discography');
-})->name('discography');
+// Route::get('/events', function () {
+//     return view('djoz/discography');
+// })->name('discography');
 
-Route::get('/a-la-une', function () {
-    return view('djoz/tours');
-})->name('tours');
+// Route::get('/a-la-une', function () {
+//     return view('djoz/tours');
+// })->name('tours');
 
-Route::get('/videos', function () {
-    return view('djoz/videos');
-})->name('videos');
+// Route::get('/videos', function () {
+//     return view('djoz/videos');
+// })->name('videos');
 Route::get('page-login', [PermissionController::class, 'page-login'])->name('page-login');
 Route::get('page-register',[  PermissionController::class, 'page-register'])->name('page-register');
 Route::get('register_agence',[  PermissionController::class, 'register_agence'])->name('register_agence');
@@ -50,7 +56,8 @@ Route::get('/confirm/{id}/{token}', 'Auth\RegisterController@confirm');
 
 Route::namespace('Tableau_de_bord')->middleware('can:access')->group(function () {
   
-Route::get('/Tableau_de_bord', [AdminController::class, 'dashboard'])->name('dashboard');
+Route::get('/Tableau_de_bord
+', [AdminController::class, 'dashboard'])->name('dashboard');
 Route::get('Tableau_de_bord/blank-page', [AdminController::class, 'blank_page'])->name('blank_page');
 Route::get('Tableau_de_bord/bootstrap_components', [AdminController::class, 'bootstrap_components'])->name('bootstrap_components');
 Route::get('Tableau_de_bord/charts', [AdminController::class, 'charts'])->name('charts');
