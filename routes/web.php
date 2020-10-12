@@ -80,6 +80,7 @@ Route::get('Tableau_de_bord/page_mailbox', [AdminController::class, 'page_mailbo
 Route::get('Tableau_de_bord/page_user', [AdminController::class, 'page_user'])->name('page_user');
 Route::get('Tableau_de_bord/table_basic', [AdminController::class, 'table_basic'])->name('table_basic');
 Route::get('Tableau_de_bord/table_data_table', [AdminController::class, 'table_data_table'])->name('table_data_table');
+Route::get('Tableau_de_bord/table_data_table_agence', [AdminController::class, 'table_data_table_agence'])->name('table_data_table_agence');
 Route::get('Tableau_de_bord/widgets', [AdminController::class, 'widgets'])->name('widgets');
 Route::get('Tableau_de_bord/ui_cards', [AdminController::class, 'ui_cards'])->name('ui_cards');
 });

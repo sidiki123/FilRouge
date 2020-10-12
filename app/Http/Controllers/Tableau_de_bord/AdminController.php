@@ -196,6 +196,13 @@ class AdminController extends Controller
         return view('Admin/vali-admin-master/docs/table-data-table', compact('events'));
     }
 
+    public function table_data_table_agence(){
+        // $events = Event::all();
+        $events = Event::where('user_id', auth()->user()->id)->get();
+        return view('Admin/vali-admin-master/docs/table-data-table-agence', compact('events'));
+    }
+
+
     public function ui_cards(){
         return view('Admin/vali-admin-master/docs/ui-cards');
     }
