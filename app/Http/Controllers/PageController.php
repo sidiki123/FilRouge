@@ -34,4 +34,5 @@ class PageController extends Controller
         return view('djoz/videos');
     }
 
+
 }

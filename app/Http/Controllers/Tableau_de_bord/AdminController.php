@@ -14,6 +14,8 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Redirect;
 use App\Providers\RouteServiceProvider;
 use App\Event;
+use App\Categorie;
+use Flashy;
 
 class AdminController extends Controller
 {
@@ -61,7 +63,7 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       
     }
 
     /**
@@ -148,7 +150,13 @@ class AdminController extends Controller
     }
 
     public function form_sample(){
-        return view('Admin/vali-admin-master/docs/form-samples');
+        $categories = Categorie::all();
+        return view('Admin/vali-admin-master/docs/form-samples',compact('categories'));
+    }
+
+    public function form_agence(){
+        $categories = Categorie::all();
+        return view('Admin/vali-admin-master/docs/form-agence',compact('categories'));
     }
 
     
@@ -196,6 +204,31 @@ class AdminController extends Controller
         return view('Admin/vali-admin-master/docs/widgets');
     }
 
+    public function store_event(Request $request)
+    {
+       $event= Event::create([
+            'titre'=> $request->get('titre'),
+            'sous_titre'=>$request->get('sous_titre'),
+            'description'=>$request->get('description'),
+            'id_categorie'=>$request->get('id_categorie'),
+            'date_debut'=>$request->get('date_debut'),
+            'date_fin'=>$request->get('date_fin'),
+            'heure'=>$request->get('heure'),
+            'lieu'=>$request->get('lieu'),
+            'ville'=>$request->get('ville'),
+            'prix'=>$request->get('prix'),
+            'user_id'=>auth()->user()->id,
+            $image='photo' => $request->photo->store('public/images'),
+            ]);
+            $event->save();
+            
+            return Redirect()->route('dashboard');
+            Flashy::success('Votre evenement a été crée avec succes');
+    }
+
+   
+        
+       
    
 
     public function accueil()

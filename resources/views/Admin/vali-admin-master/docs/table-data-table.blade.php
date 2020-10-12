@@ -24,6 +24,7 @@
                       <th>description</th>
                       <th>categorie</th>
                       <th>lieu</th>
+                      <th>photo</th>
                       <th>prix</th>
                     </tr>
                   </thead>
@@ -35,6 +36,7 @@
                       <td>{{$event->description}}</td>
                       <td>{{$event->categ->nom}}</td>
                       <td>{{$event->lieu}}</td>
+                      <td><img src="{{asset('storage/' . $event->photo)}}" class="img-responsive" style="width:10vh" ></td>
                       <td>{{$event->prix}}</td>
                     </tr>
                     @endforeach

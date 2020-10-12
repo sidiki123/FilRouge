@@ -6,7 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\Role;
-
+use App\Event;
 
 class User extends Authenticatable
 {
@@ -48,6 +48,12 @@ class User extends Authenticatable
      public function hasAnyRole(array $roles) {
 
         return $this->roles()->whereIn('name',$roles)->first();
+            
+     }
+
+     public function events() {
+
+        return $this->hasMany(Event::class);
             
      }
 }

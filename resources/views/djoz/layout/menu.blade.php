@@ -107,7 +107,8 @@
                                     @can('access')
                                     <li><a href="{{ route('dashboard') }}">
                                             {{ __('Tableau de bord') }}
-                                        </a></li>
+                                        </a>
+                                    </li>
                                     @endcan
                                     </ul>
     

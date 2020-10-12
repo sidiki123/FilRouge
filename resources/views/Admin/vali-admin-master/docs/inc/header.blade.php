@@ -101,7 +101,7 @@
             <ul class="treeview-menu">
               <li><a class="treeview-item" href="{{route('form_components')}}"><i class="icon fa fa-circle-o"></i>Evenements</a></li>
               <li><a class="treeview-item" href="{{route('form_custom')}}"><i class="icon fa fa-circle-o"></i>Visiteur</a></li>
-              <li><a class="treeview-item" href="{{route('form_sample')}}"><i class="icon fa fa-circle-o"></i>Agence</a></li>
+              <li><a class="treeview-item" href="{{route('form_agence')}}"><i class="icon fa fa-circle-o"></i>Agence</a></li>
               <li><a class="treeview-item" href="{{route('form_sample')}}"><i class="icon fa fa-circle-o"></i>Administrateur</a></li>
               <li><a class="treeview-item" href="{{route('form_notifications')}}"><i class="icon fa fa-circle-o"></i> Form Notifications</a></li>
             </ul>
@@ -110,6 +110,7 @@
             <ul class="treeview-menu">
               <li><a class="treeview-item" href="{{route('table_basic')}}"><i class="icon fa fa-circle-o"></i> Basic Tables</a></li>
               <li><a class="treeview-item" href="{{route('table_data_table')}}"><i class="icon fa fa-circle-o"></i> Data Tables</a></li>
+              <li><a class="treeview-item" href="{{route('table_data_table_agence')}}"><i class="icon fa fa-circle-o"></i> Data Tables Agence</a></li>
             </ul>
           </li>
           <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-file-text"></i><span class="app-menu__label">Pages</span><i class="treeview-indicator fa fa-angle-right"></i></a>

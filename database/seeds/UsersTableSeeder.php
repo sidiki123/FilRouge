@@ -16,8 +16,10 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         User::truncate();
         DB::table('role_user')->truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
        $admin= User::create(['name'=>'admin','email'=>'admin@admin.com','password'=>Hash::make('password')]);
        $agence= User::create(['name'=>'agence','email'=>'agence@agence.com','password'=>Hash::make('password')]);

@@ -12,6 +12,8 @@ class EventsTableSeeder extends Seeder
      */
     public function run()
     {
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
         $faker = Faker\Factory::create();
         for ($i=0; $i <20 ; $i++) { 
            Event::create([
@@ -21,6 +23,7 @@ class EventsTableSeeder extends Seeder
                'lieu' => $faker->sentence(3),
                'ville' => $faker->sentence(2),
                'id_categorie' => $faker->numberBetween(1,5),
+               'user_id' => $faker->numberBetween(1,3),
                'prix' => $faker->numberBetween(1,50) * 100,
                'date_debut' => $faker->date(),
                'date_fin' => $faker->date(),
