@@ -21,7 +21,8 @@ class PageController extends Controller
     }
 
     public function discography(){
-        return view('djoz/discography');
+        $events=Event::paginate(9);
+        return view('djoz/discography', compact('events'));
     }
 
     public function tours(){
@@ -34,5 +35,10 @@ class PageController extends Controller
         return view('djoz/videos');
     }
 
+    public function detail($titre){
+        $event= Event::where('titre',$titre)->first();
+        $event_details = Event::where('id_categorie', $event->id_categorie)->orderBy('created_at', 'desc')->take(3)->get();
+        return view('djoz/layout/detail',compact('event','event_details'));
+    }
 
 }

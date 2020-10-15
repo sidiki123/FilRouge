@@ -34,7 +34,7 @@
                    
                     <div class="event__slider owl-carousel">
                         @foreach($events1 as $event1)
-                        <a href="" style="cursor:pointer">
+                    <a href="{{route('event.detail',$event1->titre)}}" style="cursor:pointer">
                         <div class="col-lg-4">
                             <div class="event__item">
                                 <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/real/woman.jpg')}}">
@@ -78,6 +78,7 @@
             <div class="row">
                     <div class="event__slider owl-carousel">
                             @foreach($events2 as $event2)
+                            <a href="{{route('event.detail',$event2->titre)}}" style="cursor:pointer">
                             <div class="col-lg-4">
                                 <div class="event__item">
                                     <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/real/adorable.jpg')}}">
@@ -91,6 +92,7 @@
                                     </div>
                                 </div>
                             </div>
+                            </a>
                             @endforeach
                         </div>
                     </div>
@@ -113,6 +115,7 @@
         <div class="row">
                 <div class="event__slider owl-carousel">
                         @foreach($events3 as $event3)
+                        <a href="{{route('event.detail',$event3->titre)}}" style="cursor:pointer">
                         <div class="col-lg-4">
                             <div class="event__item">
                                 <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/real/angola.jpg')}}">
@@ -126,6 +129,7 @@
                                 </div>
                             </div>
                         </div>
+                        </a>
                         @endforeach
                 </div>
         </div>
@@ -146,6 +150,7 @@
         <div class="row">
                 <div class="event__slider owl-carousel">
                         @foreach($events4 as $event4)
+                        <a href="{{route('event.detail',$event4->titre)}}" style="cursor:pointer">
                         <div class="col-lg-4">
                             <div class="event__item">
                                 <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/real/head.jpg')}}">
@@ -159,6 +164,7 @@
                                 </div>
                             </div>
                         </div>
+                        </a>
                         @endforeach
                 </div>
         </div>
@@ -179,6 +185,7 @@
         <div class="row">
                 <div class="event__slider owl-carousel">
                         @foreach($events5 as $event5)
+                        <a href="{{route('event.detail',$event5->titre)}}" style="cursor:pointer">
                         <div class="col-lg-4">
                             <div class="event__item">
                                 <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/real/memorial.jpg')}}">
@@ -192,6 +199,7 @@
                                 </div>
                             </div>
                         </div>
+                        </a>
                         @endforeach
                 </div>
         </div>

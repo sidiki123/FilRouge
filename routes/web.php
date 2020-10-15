@@ -6,6 +6,7 @@ use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\CategorieController;
 use App\Categorie;
+use App\Http\Controllers\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,7 @@ Auth::routes();
 
 
 Route::get('/', [PageController::class, 'accueil'])->name('accueil');
+Route::get('/detail/{titre}', [PageController::class, 'detail'])->name('event.detail');
 Route::get('a-propos', [PageController::class, 'about'])->name('about');
 Route::get('events', [PageController::class, 'discography'])->name('discography');
 Route::get('a-la-une', [PageController::class, 'tours'])->name('tours');
@@ -57,6 +59,8 @@ Route::get('register_agence',[  PermissionController::class, 'register_agence'])
 Route::post('/register_agence_store',[PermissionController::class, 'register_agence_store'])->name('register_agence_store');
 Route::post('/store_categ', [CategorieController::class, 'store'])->name('store_categ');
 Route::get('/confirm/{id}/{token}', 'Auth\RegisterController@confirm');
+
+
 Route::namespace('Tableau_de_bord')->middleware('can:access')->group(function () {
   
 Route::get('/Tableau_de_bord', [AdminController::class, 'dashboard'])->name('dashboard');
@@ -69,8 +73,6 @@ Route::get('Tableau_de_bord/form_custom', [AdminController::class, 'form_custom'
 Route::get('Tableau_de_bord/form_notifications',[AdminController::class, 'form_notifications'])->name('form_notifications');
 Route::get('Tableau_de_bord/form_sample', [AdminController::class, 'form_sample'])->name('form_sample');
 Route::get('Tableau_de_bord/form_agence', [AdminController::class, 'form_agence'])->name('form_agence');
-
-
 Route::post('', [AdminController::class, 'store_event'])->name('store_event');
 Route::get('Tableau_de_bord/page_calendar', [AdminController::class, 'page_calendar'])->name('page_calendar');
 Route::get('Tableau_de_bord/page_error',[AdminController::class, 'page_error'])->name('page_error');

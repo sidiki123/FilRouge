@@ -26,147 +26,38 @@
                 </div>
             </div>
            <div class="row">
+              
                     <div class="">
-                        <div class="col-lg-4">
+                        @foreach($events as $event)
+                        <a href="{{route('event.detail',$event->titre)}}" style="cursor:pointer">
+                        <div class="col-lg-4 col-sm-4" style="margin-bottom:5vh;">
                             <div class="event__item">
                                 <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/real/woman.jpg')}}">
                                     <div class="tag-date">
-                                        <span>02 Aout 2021</span>
+                                        <span>{{$event->date_debut}}</span>
                                     </div>
                                 </div>
                                 <div class="event__item__text">
-                                    <h4>Semaine Nationale de la culture(SNC) </h4>
-                                    <p><i class="fa fa-map-marker"></i>Palais de la culture, Bobo Dioulasso, Burkina</p>
+                                    <h5 style="font-weight:800">{{$event->titre}}</h5>
+                                    <p><i class="fa fa-map-marker"></i>{{$event->lieu}}</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4">
-                            <div class="event__item">
-                                <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/real/children.jpg')}}">
-                                    <div class="tag-date">
-                                        <span>27 Mars 2021</span>
-                                    </div>
-                                </div>
-                                <div class="event__item__text">
-                                    <h4>Nuit Httypique de koudougou(NAK)</h4>
-                                    <p><i class="fa fa-map-marker"></i> Maison du peuple, Koudougou, Burkina</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="event__item">
-                                <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/real/dog.jpg')}}">
-                                    <div class="tag-date">
-                                        <span>15 Decembre 2020 à 10h00</span>
-                                    </div>
-                                </div>
-                                <div class="event__item__text">
-                                    <h4>BF1 Freestyle</h4>
-                                    <p><i class="fa fa-map-marker"></i> Cenasa, ouagadougou, Burkina</p>
-                                </div>
-                            </div>
-                        </div>
-                        
+                        </a>
+                        @endforeach
                     </div>
+              
             </div>
 
-            <div class="row">
-                    <div class="">
-                        <div class="col-lg-4">
-                            <div class="event__item">
-                                <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/real/lady.jpg')}}">
-                                    <div class="tag-date">
-                                        <span>02 Aout 2021</span>
-                                    </div>
-                                </div>
-                                <div class="event__item__text">
-                                    <h4>Semaine Nationale de la culture(SNC) </h4>
-                                    <p><i class="fa fa-map-marker"></i>Palais de la culture, Bobo Dioulasso, Burkina</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="event__item">
-                                <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/real/smile.jpg')}}">
-                                    <div class="tag-date">
-                                        <span>27 Mars 2021</span>
-                                    </div>
-                                </div>
-                                <div class="event__item__text">
-                                    <h4>Nuit Httypique de koudougou(NAK)</h4>
-                                    <p><i class="fa fa-map-marker"></i> Maison du peuple, Koudougou, Burkina</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="event__item">
-                                <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/real/memorial.jpg')}}">
-                                    <div class="tag-date">
-                                        <span>15 Decembre 2020 à 10h00</span>
-                                    </div>
-                                </div>
-                                <div class="event__item__text">
-                                    <h4>BF1 Freestyle</h4>
-                                    <p><i class="fa fa-map-marker"></i> Cenasa, ouagadougou, Burkina</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-            </div>
-
-            <div class="row">
-                    <div class="">
-                        <div class="col-lg-4">
-                            <div class="event__item">
-                                <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/EVTICKET.png')}}">
-                                    <div class="tag-date">
-                                        <span>02 Aout 2021</span>
-                                    </div>
-                                </div>
-                                <div class="event__item__text">
-                                    <h4>Semaine Nationale de la culture(SNC) </h4>
-                                    <p><i class="fa fa-map-marker"></i>Palais de la culture, Bobo Dioulasso, Burkina</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="event__item">
-                                <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/real/couple.jpg')}}">
-                                    <div class="tag-date">
-                                        <span>27 Mars 2021</span>
-                                    </div>
-                                </div>
-                                <div class="event__item__text">
-                                    <h4>Nuit Httypique de koudougou(NAK)</h4>
-                                    <p><i class="fa fa-map-marker"></i> Maison du peuple, Koudougou, Burkina</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="event__item">
-                                <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/real/african.jpg')}}">
-                                    <div class="tag-date">
-                                        <span>15 Decembre 2020 à 10h00</span>
-                                    </div>
-                                </div>
-                                <div class="event__item__text">
-                                    <h4>BF1 Freestyle</h4>
-                                    <p><i class="fa fa-map-marker"></i> Cenasa, ouagadougou, Burkina</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-            </div>
-                <div class="col-lg-12">
+           {{$events->links('vendor.pagination.simple-default')}}
+                {{-- <div class="col-lg-12">
                     <div class="pagination__links">
                         <a href="#">1</a>
                         <a href="#">2</a>
                         <a href="#">3</a>
                         <a href="#">suivant</a>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>

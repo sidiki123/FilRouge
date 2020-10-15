@@ -127,9 +127,7 @@ class AdminController extends Controller
     public function dashboard(User $user){
         if( Gate::denies('access')){
             return redirect()->route('accueil');
-            
         }
-        
         return view('Admin/vali-admin-master/docs/dashboard');
     }
 

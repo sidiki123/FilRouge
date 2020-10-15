@@ -70,6 +70,7 @@
                             
                         </div>
                         <a href="#" class="primary-btn">Reserver</a>
+                        <a href="{{route('event.detail',$event->titre)}}" class="btn btn-lg btn-primary" style="cursor:pointer">En savoir plus </a>
                     </div>
                 </div>
                 @endforeach
