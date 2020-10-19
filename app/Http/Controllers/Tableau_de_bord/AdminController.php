@@ -226,9 +226,9 @@ class AdminController extends Controller
             $image='photo' => $request->photo->store('public/images'),
             ]);
             $event->save();
-            
-            return Redirect()->route('dashboard');
             Flashy::success('Votre evenement a été crée avec succes');
+            return Redirect()->route('dashboard');
+          
     }
 
    

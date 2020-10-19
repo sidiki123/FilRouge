@@ -46,19 +46,20 @@
     <header class="header">
         <div class="container">
             <div class="row">
-                <div class="col-lg-2 col-md-2">
+                <div class="col-lg-1 col-md-1">
                     <div class="header__logo">
                         <a href="./index.html"><img src="{{asset('assets/img/Ev.png')}}" alt="" height="60vh"></a>
                     </div>
                 </div>
-                <div class="col-lg-10 col-md-10">
+                <div class="col-lg-11 col-md-11">
                     <div class="header__nav">
                         <nav class="header__menu mobile-menu">
                             <ul>
-                            <li class="active"><a href="{{route('accueil')}}">Accueil</a></li>
-                            <li><a href="{{route('tours')}}">A la une</a></li>
-                            <li><a href="{{route('discography')}}">Evenements</a></li>
-                                <li ><a href="{{route('about')}}">A propos</a></li>
+                            <li class="{{set_active_route('accueil')}}"><a href="{{route('accueil')}}">Accueil</a></li>
+                            <li class="{{set_active_route('tours')}}"><a href="{{route('tours')}}">A la une</a></li>
+                            <li class="{{set_active_route('discography')}}"><a href="{{route('discography')}}">Evenements</a></li>
+                            <li class="{{set_active_route('about')}}"><a href="{{route('about')}}">A propos</a></li>
+                            
                                 
                                 
                                 {{-- <li><a href="{{route('videos')}}">Videos</a></li> --}}
@@ -115,8 +116,9 @@
                                    
                                 </li>
                             @endguest
-                            
+                            <li ><a class="text-warning" href="#"><i class="fa fa-shopping-cart fa-lg"></i> <span class="badge badge-pill badge-pack" style="background-color:black">{{Cart::count()}}</span> </a></li>
                             </ul>
+                           
                         </nav>
                         
                     </div>

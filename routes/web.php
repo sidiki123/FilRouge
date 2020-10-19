@@ -6,7 +6,7 @@ use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\CategorieController;
 use App\Categorie;
-use App\Http\Controllers\EventController;
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +33,8 @@ Route::get('a-propos', [PageController::class, 'about'])->name('about');
 Route::get('events', [PageController::class, 'discography'])->name('discography');
 Route::get('a-la-une', [PageController::class, 'tours'])->name('tours');
 Route::get('videos', [PageController::class, 'videos'])->name('videos');
+
+Route::post('panier/ajouter',[CartController::class,'store'])->name('cart.store');
 
 // Route::get('/', function () {
 //     return view('djoz/index');
