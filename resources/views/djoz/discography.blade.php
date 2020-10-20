@@ -25,14 +25,14 @@
                     </div>
                 </div>
             </div>
-           <div class="row">
+           {{-- <div class="row">
               
                     <div class="">
                         @foreach($events as $event)
                         <a href="{{route('event.detail',$event->titre)}}" style="cursor:pointer">
-                        <div class="col-lg-4 col-sm-4" style="margin-bottom:5vh;">
+                                <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="event__item">
-                                <div class="event__item__pic set-bg" data-setbg="{{asset('assets/img/real/woman.jpg')}}">
+                                <div class="event__item__pic set-bg" data-setbg="{{asset('storage/' . $event->photo)}}">
                                     <div class="tag-date">
                                         <span>{{$event->date_debut}}</span>
                                     </div>
@@ -47,6 +47,32 @@
                         @endforeach
                     </div>
               
+            </div> --}}
+
+            <div class="row">
+                    @foreach($events as $event)
+                    <a href="{{route('event.detail',$event->titre)}}" style="cursor:pointer">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="discography__item">
+                            <div class="discography__item__pic">
+                                <img src="{{asset('storage/' . $event->photo)}}" alt="">
+                            </div>
+                            <div class="discography__item__text">
+                                <h4 style="font-weight:900">{{$event->titre}}</h4>
+                                <span>{{$event->date_debut}}</span> || <span>{{$event->date_fin}}</span>
+                               
+                            </div>
+                            <div style="display:flex; flex-direction:row; background-color:black; justify-content:space-between">
+                               
+                                    <h5 style="font-weight:600;color:white">
+                                         <p style="color:#ffc107"><i class="fa fa-map-marker"></i>Lieu</p>
+                                       &nbsp;&nbsp; {{$event->lieu}}
+                                    </h5>
+                                    <a type="submit" class="primary-btn"  style="font-weight:1000;color:white">{{$event->prix}} </a>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
             </div>
 
            {{$events->links('vendor.pagination.simple-default')}}

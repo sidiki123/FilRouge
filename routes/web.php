@@ -34,7 +34,9 @@ Route::get('events', [PageController::class, 'discography'])->name('discography'
 Route::get('a-la-une', [PageController::class, 'tours'])->name('tours');
 Route::get('videos', [PageController::class, 'videos'])->name('videos');
 
+Route::get('/panier', [CartController::class,'index'])->name('cart.index');
 Route::post('panier/ajouter',[CartController::class,'store'])->name('cart.store');
+Route::get('/vider-panier',[CartController::class,'vider'])->name('vider_panier');
 
 // Route::get('/', function () {
 //     return view('djoz/index');

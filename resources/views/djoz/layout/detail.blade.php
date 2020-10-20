@@ -32,9 +32,8 @@
                             <li>
                                 <form action="{{route('cart.store')}}" method="POST">
                                 @csrf
-                                    <input type="hidden" name="id" value="{{$event->id}}">
-                                    <input type="hidden" name="titre" value="{{$event->titre}}">
-                                    <input type="hidden" name="prix" value="{{$event->prix}}">
+                                    <input type="hidden" name="event_id" value="{{$event->id}}">
+                                   
                                     <button type="submit" class="primary-btn">Ajouter au panier</button>
                                 </form> 
                             </li>

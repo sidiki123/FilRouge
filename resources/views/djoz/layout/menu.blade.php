@@ -116,8 +116,15 @@
                                    
                                 </li>
                             @endguest
-                            <li ><a class="text-warning" href="#"><i class="fa fa-shopping-cart fa-lg"></i> <span class="badge badge-pill badge-pack" style="background-color:black">{{Cart::count()}}</span> </a></li>
-                            </ul>
+                            
+                            <li ><a class="text-warning"><i class="fa fa-shopping-cart fa-lg"></i> <span class="badge badge-pill badge-pack" style="background-color:black">{{Cart::count()}}</span> </a>
+                                <ul class="dropdown">
+                                        <li><a href="{{ route('cart.index') }}" >Voir le panier</a></li>
+                                        <li><a href="{{ route('vider_panier') }}" >Vider le panier</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
                            
                         </nav>
                         
