@@ -7,6 +7,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\CategorieController;
 use App\Categorie;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CaisseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +37,11 @@ Route::get('videos', [PageController::class, 'videos'])->name('videos');
 
 Route::get('/panier', [CartController::class,'index'])->name('cart.index');
 Route::post('panier/ajouter',[CartController::class,'store'])->name('cart.store');
+Route::delete('panier/{rowId}',[CartController::class,'destroy'])->name('cart.destroy');
 Route::get('/vider-panier',[CartController::class,'vider'])->name('vider_panier');
+Route::get('/paiement',[CaisseController::class,'index'])->name('caisse.index');
+Route::post('/paiement',[CaisseController::class,'store'])->name('caisse.store');
+Route::get('/merci',[CaisseController::class,'merci'])->name('caisse.merci');
 
 // Route::get('/', function () {
 //     return view('djoz/index');

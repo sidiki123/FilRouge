@@ -68,7 +68,7 @@
                                          <p style="color:#ffc107"><i class="fa fa-map-marker"></i>Lieu</p>
                                        &nbsp;&nbsp; {{$event->lieu}}
                                     </h5>
-                                    <a type="submit" class="primary-btn"  style="font-weight:1000;color:white">{{$event->prix}} </a>
+                                    <a type="submit" class="primary-btn"  style="font-weight:1000;color:white">{{$event->getPrice()}} </a>
                             </div>
                         </div>
                     </div>

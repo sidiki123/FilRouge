@@ -22,4 +22,9 @@ class Event extends Model
         return $this->belongsTo(User::class);
             
      }
+
+     public function getPrice(){
+         $prix= $this->prix;
+         return number_format($prix,0,',',' ').' F CFA';
+     }
 }

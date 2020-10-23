@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Stripe\Stripe;
+use Stripe\PaymentIntent;
 use Gloudemans\Shoppingcart\Facades\Cart;
-use App\Event;
-use Flashy;
-use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Arr;
 
-class CartController extends Controller
+class CaisseController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +17,20 @@ class CartController extends Controller
      */
     public function index()
     {
-        return view('djoz/layout/panier');
+        if(Cart::count()<=0 ){
+            return redirect()->route('discography');
+        }
+
+        Stripe::setApiKey('sk_test_51Hf39aHaGvKGAPJJY3ZkNEikSktBvX3T9boxRaUIw9KZfIuc3ZhpfqbCQtZDHNwv4RRRJjgzb7GWS8Fg6eK8kjNA005GqjYqGl');
+        $intent= PaymentIntent::create([
+            'amount'=>round(Cart::total()),
+            'currency'=> 'xof',
+        ]);
+        $clientSecret= Arr::get($intent,'client_secret');
+        
+        return view('djoz.caisse.index',[
+            'clientSecret'=>$clientSecret
+        ]);
     }
 
     /**
@@ -38,29 +51,13 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-      
-        $duplicata= Cart::search(function($cartItem, $rowId) use ($request){
-            return $cartItem->id == $request->event_id;
-        });
-
-        if ( $duplicata->isNotEmpty()){
-            return Redirect()->route('discography');
-        }
-
-       $event= Event::find($request->event_id);
-
-
-        Cart::add($event->id,$event->titre,1,$event->prix)
-        ->associate('App\Event');
-
-        // Flashy::success('Le produit a ete ajoute au panier');
-        return Redirect()->route('discography');
+        Cart::destroy();
+       $data= $request->json()->all();
+       return $data['paymentIntent'];
     }
 
-
-    public function vider(){
-       $vider= Cart::destroy();
-       return Redirect()->route('discography');
+    public function merci(){
+        return view('djoz.layout.merci');
     }
     /**
      * Display the specified resource.
@@ -102,11 +99,8 @@ class CartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($rowId)
+    public function destroy($id)
     {
-        Cart::remove($rowId);
-        Flashy::success('Le produit a ete ajoute au panier');
-        return back();
+        //
     }
-    
 }
