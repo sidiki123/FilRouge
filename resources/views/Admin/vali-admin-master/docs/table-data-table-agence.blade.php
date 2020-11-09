@@ -21,11 +21,11 @@
                     <tr>
                       <th>id</th>
                       <th>Titre</th>
-                      <th>description</th>
                       <th>categorie</th>
                       <th>lieu</th>
                       <th>photo</th>
                       <th>prix</th>
+                      <th>Actions</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -33,11 +33,18 @@
                     <tr>
                       <td>{{$event->id}}</td>
                       <td>{{$event->titre}}</td>
-                      <td>{{$event->description}}</td>
                       <td>{{$event->categ->nom}}</td>
                       <td>{{$event->lieu}}</td>
                       <td><img src="{{asset('storage/' . $event->photo)}}" class="img-responsive" style="width:10vh" ></td>
                       <td>{{$event->prix}}</td>
+                      <td style="display:flex; flex-direction:row;">
+                          <form action="{{route('action_event.destroy',$event)}}" method="post">
+                           @csrf
+                          @method('DELETE')
+                          <button class="btn btn-danger" type="submit">Supprimer</button>
+                        </form>
+                      <a href="{{route('action_event.edit',$event)}}" class="btn btn-primary">Modifier</a>
+                      </td>
                     </tr>
                     @endforeach
                   </tbody>

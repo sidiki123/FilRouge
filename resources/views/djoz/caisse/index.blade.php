@@ -4,7 +4,7 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
-    
+                <h1>Paiement</h1>
               <!-- Shopping cart table -->
             <form method="POST" action="{{route('caisse.store')}}" id="payment-form">
                 @csrf

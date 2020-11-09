@@ -8,6 +8,7 @@ use App\Http\Controllers\CategorieController;
 use App\Categorie;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CaisseController;
+use App\Http\Controllers\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,6 +44,8 @@ Route::get('/paiement',[CaisseController::class,'index'])->name('caisse.index');
 Route::post('/paiement',[CaisseController::class,'store'])->name('caisse.store');
 Route::get('/merci',[CaisseController::class,'merci'])->name('caisse.merci');
 
+
+Route::resource('action_event', 'EventController');
 // Route::get('/', function () {
 //     return view('djoz/index');
 // })->name('accueil');

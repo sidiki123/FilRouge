@@ -18,7 +18,7 @@
   </head>
   <body class="app sidebar-mini">
        <!-- Navbar-->
-  <header class="app-header"><a class="app-header__logo" href="{{route('dashboard')}}">Vali</a>
+  <header class="app-header"><a class="app-header__logo" href="{{route('dashboard')}}">EVTICKET</a>
         <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
         <!-- Navbar Right Menu-->
         <ul class="app-nav">
@@ -80,15 +80,15 @@
       <!-- Sidebar menu-->
       <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
       <aside class="app-sidebar">
-        <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" alt="User Image">
+        <div class="app-sidebar__user">
           <div>
-            <p class="app-sidebar__user-name">John Doe</p>
-            <p class="app-sidebar__user-designation">Frontend Developer</p>
+            {{-- <p class="app-sidebar__user-name">John Doe</p> --}}
+            <p class="app-sidebar__user-designation">Tableau de bord</p>
           </div>
         </div>
         <ul class="app-menu">
-          <li><a class="app-menu__item active" href="{{route('dashboard')}}"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Dashboard</span></a></li>
-          <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-laptop"></i><span class="app-menu__label">UI Elements</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+          <li><a class="app-menu__item active" href="{{route('dashboard')}}"  ><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Acceuil</span></a></li>
+          {{-- <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-laptop"></i><span class="app-menu__label">UI Elements</span><i class="treeview-indicator fa fa-angle-right"></i></a>
             <ul class="treeview-menu">
               <li><a class="treeview-item" href="{{route('bootstrap_components')}}"><i class="icon fa fa-circle-o"></i> Bootstrap Elements</a></li>
               <li><a class="treeview-item" href="https://fontawesome.com/v4.7.0/icons/" target="_blank" rel="noopener"><i class="icon fa fa-circle-o"></i> Font Icons</a></li>
@@ -96,24 +96,29 @@
               <li><a class="treeview-item" href="{{route('widgets')}}"><i class="icon fa fa-circle-o"></i> Widgets</a></li>
             </ul>
           </li>
-          <li><a class="app-menu__item" href="{{route('charts')}}"><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Charts</span></a></li>
-          <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-edit"></i><span class="app-menu__label">Formulaires</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+          <li><a class="app-menu__item" href="{{route('charts')}}"><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Charts</span></a></li> --}}
+          <li class="treeview"><a class="app-menu__item"  href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-edit"></i><span class="app-menu__label">Formulaires</span><i class="treeview-indicator fa fa-angle-right"></i></a>
             <ul class="treeview-menu">
-              <li><a class="treeview-item" href="{{route('form_components')}}"><i class="icon fa fa-circle-o"></i>Evenements</a></li>
-              <li><a class="treeview-item" href="{{route('form_custom')}}"><i class="icon fa fa-circle-o"></i>Visiteur</a></li>
-              <li><a class="treeview-item" href="{{route('form_agence')}}"><i class="icon fa fa-circle-o"></i>Agence</a></li>
-              <li><a class="treeview-item" href="{{route('form_sample')}}"><i class="icon fa fa-circle-o"></i>Administrateur</a></li>
-              <li><a class="treeview-item" href="{{route('form_notifications')}}"><i class="icon fa fa-circle-o"></i> Form Notifications</a></li>
+              {{-- <li><a class="treeview-item" href="{{route('form_components')}}"><i class="icon fa fa-circle-o"></i>Evenements</a></li>
+              <li><a class="treeview-item" href="{{route('form_custom')}}"><i class="icon fa fa-circle-o"></i>Visiteur</a></li> --}}
+              @can('accessAdmin')
+              <li><a class="treeview-item" class="{{set_active_route('form_sample')}}" href="{{route('form_sample')}}"><i class="icon fa fa-circle-o"></i>Enregistrer une categorie</a></li>
+              @endcan 
+              <li><a class="treeview-item" class="{{set_active_route('form_aagence')}}" href="{{route('form_agence')}}"><i class="icon fa fa-circle-o"></i>Enregistrer un evenement</a></li>
+            
+              {{-- <li><a class="treeview-item" href="{{route('form_notifications')}}"><i class="icon fa fa-circle-o"></i> Form Notifications</a></li> --}}
             </ul>
           </li>
-          <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">Tables</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+          <li class="treeview"><a class="app-menu__item" href="#"  data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">Listes</span><i class="treeview-indicator fa fa-angle-right"></i></a>
             <ul class="treeview-menu">
-              <li><a class="treeview-item" href="{{route('table_basic')}}"><i class="icon fa fa-circle-o"></i> Basic Tables</a></li>
-              <li><a class="treeview-item" href="{{route('table_data_table')}}"><i class="icon fa fa-circle-o"></i> Data Tables</a></li>
-              <li><a class="treeview-item" href="{{route('table_data_table_agence')}}"><i class="icon fa fa-circle-o"></i> Data Tables Agence</a></li>
+              {{-- <li><a class="treeview-item" href="{{route('table_basic')}}"><i class="icon fa fa-circle-o"></i> Basic Tables</a></li> --}}
+              @can('accessAdmin')
+              <li><a class="treeview-item" href="{{route('table_data_table')}}" class="{{set_active_route('table_data_table')}}"><i class="icon fa fa-circle-o"></i>Liste des evenements</a></li>
+              @endcan
+              <li><a class="treeview-item" href="{{route('table_data_table_agence')}}" class="{{set_active_route('table_data_table_agence')}}"><i class="icon fa fa-circle-o"></i>Evenements enregistrés</a></li>
             </ul>
           </li>
-          <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-file-text"></i><span class="app-menu__label">Pages</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+          {{-- <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-file-text"></i><span class="app-menu__label">Pages</span><i class="treeview-indicator fa fa-angle-right"></i></a>
             <ul class="treeview-menu">
               <li><a class="treeview-item" href="{{route('blank_page')}}"><i class="icon fa fa-circle-o"></i> Blank Page</a></li>
               <li><a class="treeview-item" href="{{route('page-login')}}"><i class="icon fa fa-circle-o"></i> Login Page</a></li>
@@ -125,7 +130,7 @@
               <li><a class="treeview-item" href="{{route('page_error')}}"><i class="icon fa fa-circle-o"></i> Error Page</a></li>
             </ul>
           </li>
-          <li><a class="app-menu__item" href="{{route('docs')}}"><i class="app-menu__icon fa fa-file-code-o"></i><span class="app-menu__label">Docs</span></a></li>
+          <li><a class="app-menu__item" href="{{route('docs')}}"><i class="app-menu__icon fa fa-file-code-o"></i><span class="app-menu__label">Docs</span></a></li> --}}
         </ul>
       </aside>
       @include('flashy::message')

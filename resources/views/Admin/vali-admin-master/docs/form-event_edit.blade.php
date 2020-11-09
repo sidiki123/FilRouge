@@ -2,26 +2,27 @@
     <main class="app-content">
         <div class="col-md-12">
           <div class="tile">
-            <h3 class="tile-title">Enregistrer un evenement</h3>
+            <h3 class="tile-title">Modifier un evenement</h3>
             <div class="tile-body">
-            <form  method="POST" action="{{route('store_event')}}" enctype="multipart/form-data">
+            <form  method="POST" action="{{route('action_event.update', $event)}}" enctype="multipart/form-data">
                 @csrf
+                @method('PUT')
                 <div class="form-group row">
                   <label class="control-label col-md-3">Titre</label>
                   <div class="col-md-8">
-                    <input class="form-control col-md-8" name="titre" type="text">
+                  <input class="form-control col-md-8" name="titre" type="text" value="{{$event->titre}}">
                   </div>
                 </div>
                 <div class="form-group row">
                   <label class="control-label col-md-3">Sous-titre</label>
                   <div class="col-md-8">
-                    <input class="form-control" name="sous_titre" type="text">
+                    <input class="form-control" name="sous_titre" type="text" value="{{$event->sous_titre}}">
                   </div>
                 </div>
                 <div class="form-group row">
                   <label class="control-label col-md-3">Description</label>
                   <div class="col-md-8">
-                    <textarea class="form-control" name="description" rows="4"></textarea>
+                    <textarea class="form-control" name="description" rows="4" >{{$event->description}}</textarea>
                   </div>
                 </div>
                 <div class="form-group row">
@@ -44,43 +45,43 @@
                 <div class="form-group row">
                     <label class="control-label col-md-3">Date de debut</label>
                       <div class="col-md-8">
-                          <input class="form-control" name="date_debut" id="demoDate" type="date">
+                          <input class="form-control" name="date_debut" id="demoDate" type="date" value="{{$event->date_debut}}">
                       </div>
                 </div>
                 <div class="form-group row">
                     <label class="control-label col-md-3">Date de fin</label>
                       <div class="col-md-8">
-                          <input class="form-control" name="date_fin" id="demoDate" type="date">
+                          <input class="form-control" name="date_fin" id="demoDate" type="date" value="{{$event->date_fin}}">
                       </div>
                 </div>
                 <div class="form-group row">
                     <label class="control-label col-md-3">Heure</label>
                       <div class="col-md-8">
-                          <input class="form-control" name="heure" id="demoDate" type="time">
+                          <input class="form-control" name="heure" id="demoDate" type="time" value="{{$event->heure}}">
                       </div>
                 </div>
                 <div class="form-group row">
                     <label class="control-label col-md-3">Lieu</label>
                     <div class="col-md-8">
-                      <input class="form-control col-md-10" name="lieu" type="text">
+                      <input class="form-control col-md-10" name="lieu" type="text" value="{{$event->lieu}}">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="control-label col-md-3">Ville</label>
                     <div class="col-md-8">
-                      <input class="form-control col-md-10" name="ville" type="text">
+                      <input class="form-control col-md-10" name="ville" type="text" value="{{$event->ville}}">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="control-label col-md-3">Prix</label>
                     <div class="col-md-8">
-                      <input class="form-control col-md-8" name="prix" type="number">
+                      <input class="form-control col-md-8" name="prix" type="number" value="{{$event->prix}}">
                     </div>
                 </div>
                 <div class="tile-footer">
                     <div class="row">
                       <div class="col-md-8 col-md-offset-3">
-                        <button class="btn btn-primary" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Enregistrer</button>
+                        <button class="btn btn-primary" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Modifier</button>
                         &nbsp;&nbsp;&nbsp;<a class="btn btn-secondary" href="#"><i class="fa fa-fw fa-lg fa-times-circle"></i>Annuler</a>
                       </div>
                     </div>

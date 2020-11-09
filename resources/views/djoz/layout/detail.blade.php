@@ -70,30 +70,23 @@
                                 </div> --}}
                             </div>
                             <div class="blog__details__desc">
-                                <p>I feel as though a lot of people who read my articles are under the impression that I am
-                                    suggesting eventually someone is going to come into their life and every puzzle piece
-                                    will simply pop into place. Doves will fly out from behind you, a chorus will follow you
-                                    around on every date, you will find a bag with 10 million dollars in the street, which
-                                    you will use to move to Pleasantville, USA.</p>
-                                <p>You need mutual respect, compromise, sacrifice, understanding, the willingness to work at
-                                    it and stand by him or her when times get rough. You need to be willing to be by their
-                                    side not only during the bright days but also during the dark ones that Love is not all
-                                    you need.</p>
+                                <p>{{$event->description}}</p>
+                              
                             </div>
-                            <div class="blog__details__quote" >
+                            {{-- <div class="blog__details__quote" >
                                 <p>None of them will tell you that they will stay together forever because it’s easy. None
                                     of them will tell you that they pledged their life.</p>
                                 <h6>OSCAR HUDSPETH</h6>
                                 <i class="fa fa-quote-right" style="color:tomato;"></i>
-                            </div>
-                            <div class="blog__details__desc">
+                            </div> --}}
+                            {{-- <div class="blog__details__desc">
                                 <p>You are committing to someone’s whole self. You are not just committing to them under the
                                     condition that they stay young and beautiful — because they will not. And neither will
                                     you. You are not just committing to them until someone better comes along while neither
                                     they nor your relationship is perfect.</p>
                                 <p>This is the person you want to be with. You are committing to their very being. To the
                                     idea that the two of you are</p>
-                            </div>
+                            </div> --}}
                             <div class="blog__details__tags">
                                 <a href="#">Evenement</a>
                                 <a href="#">{{$event->categ->nom}}</a>

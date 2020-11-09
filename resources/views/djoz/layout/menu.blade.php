@@ -49,7 +49,7 @@
             <div class="row">
                 <div class="col-lg-1 col-md-1">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="{{asset('assets/img/Ev.png')}}" alt="" height="60vh"></a>
+                    <a href="{{route('accueil')}}"><img src="{{asset('assets/img/Ev.png')}}" alt="" height="60vh"></a>
                     </div>
                 </div>
                 <div class="col-lg-11 col-md-11">

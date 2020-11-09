@@ -28,6 +28,11 @@ class AuthServiceProvider extends ServiceProvider
             return $user->hasAnyRole(['admin','agence']);
         });
 
+        $this->registerPolicies();
+        Gate::define('accessAdmin', function($user){
+            return $user->hasAnyRole(['admin']);
+        });
+
         //
     }
 }

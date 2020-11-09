@@ -21,7 +21,8 @@ class PageController extends Controller
     }
 
     public function discography(){
-        $events=Event::paginate(9);
+        // $events=Event::paginate(9);
+        $events=Event::orderBy('created_at','desc')->paginate(9);
         return view('djoz/discography', compact('events'));
     }
 
